@@ -43,7 +43,7 @@ public class Login {
         wd.quit();
     }
     
-    public static boolean isAlertPresent(FirefoxDriver wd) {
+    public static boolean isAlertPresent(ChromeDriver wd) {
         try {
             wd.switchTo().alert();
             return true;
