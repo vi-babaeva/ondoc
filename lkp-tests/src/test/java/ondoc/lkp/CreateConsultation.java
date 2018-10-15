@@ -1,124 +1,30 @@
 package ondoc.lkp;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.*;
 
-public class CreateConsultation {
-    ChromeDriver wd;
-    //FirefoxDriver wd;
-    
-    @BeforeMethod
-    public void setUp() throws Exception {
-        wd = new ChromeDriver();
-        //wd = new FirefoxDriver();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        wd.get("https://dev.ondoc.me/");
-        login("patient.ondoc@mail.ru", "q1234567Q!");
-    }
-
-    private void login(String usermane, String password) {
-        wd.findElement(By.linkText("Войти")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).clear();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).sendKeys(usermane);
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).clear();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).sendKeys(password);
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/button")).click();
-        //wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        //wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
-    }
+public class CreateConsultation extends TestBase {
 
     @Test
     public void testCreateConsultation() throws InterruptedException {
-
         gotoMedcard();
-        choseСonsultation();
+        choseType();
+        createConsultation();
         MKB();
-        diagnosis("диагноз в свободной форме");
-        complaints("жалобы пациента");
-        anamnesis("анамнез пациента");
-        objectively("лалалалалалалалала");
-        recommendations("рекомендован отпуск");
+        diagnosis("Атопический дерматит");
+        complaints("Красные отёчные пятна");
+        anamnesis("Заболевание проявляется появлением сыпи в области локтевых сгибов, которая появляется в зимнее время. Появление сыпи сопровождается покраснением, отечностью и зудом в месте высыпаний. Больной связывает появление сыпи в зимнее время с повышением потливости в области локтевых сгибов вследствие ношения теплой одежды и раздражения кожи шерстяными вещами. Зуд способствует расчесывания зоны высыпаний. Во время обострений больной ничем не лечится, так как по его словам применение назначаемых врачом в поликлинике мазей лишь усугубляет течение патологического процесса (зуд становится интенсивней, количество высыпаний увеличивается). Названий назначаемых мазей больной не помнит. Без проводимого лечения высыпаний постепенно становится меньше, зуд стихает, отек спадает. Как правило, симптомы заболевания исчезают в весенний период, особенно после солнечной инсоляции пораженных участков. В весенний, летний и осенний период заболевание, как правило, себя не проявляет. Последний рецидив заболевания отмечался в марте 2001 года.");
+        objectively("Состояние удовлетворительное, сознание ясное, положение активное, телосложение правильное, рост средний, тип конституции – нормостенический, походка бодрая, осанка правильная.\n" +
+                "\n" +
+                "Мышцы нормотрофичны, развиты симметрично, при пальпации безболезненны.\n" +
+                "\n" +
+                "Пальпируются лимфоузлы в подмышечных впадинах и подчелюстные, не увеличены (размером 0,5–1 см), овальной формы, гладкие, подвижные, безболезненны.");
+        recommendations("Диспансерный учёт у дерматолога по месту жительства\n" +
+                "Диета с ограничением животных жиров, углеводов. Исключение острых, копчёных, жареных блюд, алкоголя, кофе, цитрусовых (гипоаллергенная диета).\n" +
+                "Рациональный гигиенический режим ухода за кожей\n" +
+                "Отказ от курения и употребления алкоголя.\n" +
+                "Избегать стрессовых ситуаций\n" +
+                "Избегать респираторных заболеваний\n" +
+                "Санаторно-курортное лечение – сероводородные и радоновые источники (Мацеста, Цхалубо и др.), солнечные ванны.");
         save();
-    }
-
-    private void save() {
-        wd.findElement(By.xpath("//div[@class='widget']//button[.='Сохранить']")).click();
-    }
-
-    private void recommendations(String recomendadions) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).sendKeys(recomendadions);
-    }
-
-    private void objectively(String objectivno) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).sendKeys(objectivno);
-    }
-
-    private void anamnesis(String anam) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).sendKeys(anam);
-    }
-
-    private void complaints(String zhalob) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/div[2]/textarea")).sendKeys(zhalob);
-    }
-
-    private void diagnosis(String diag) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[3]/input")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[3]/input")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[3]/input")).sendKeys(diag);
-    }
-
-    private void MKB() {
-        wd.findElement(By.id("icd-form-select_value")).click();
-        wd.findElement(By.id("icd-form-select_value")).clear();
-        wd.findElement(By.id("icd-form-select_value")).sendKeys("it");
-        wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
-    }
-
-    private void choseСonsultation() throws InterruptedException {
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")).click();
-        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[1]/div")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
-        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]/div")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
-        wd.findElement(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding")).click();
-    }
-
-
-    private void gotoMedcard() {
-        wd.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
-        //wd.findElement(By.xpath("//*[contains(text(), 'Медицинская карта')]")).click();
-        //wd.findElement(By.cssSelector("a.sidebar__menu-link")).click();
-        //wd.findElement(By.linkText("Медицинская карта")).click();
-    }
-
-    @AfterMethod
-     public void tearDown() {
-        //wd.quit();
-    }
-    
-    public static boolean isAlertPresent(ChromeDriver wd) {
-    //public static boolean isAlertPresent(FirefoxDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
     }
 }

@@ -4,18 +4,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
-
 import java.util.concurrent.TimeUnit;
-import java.util.Date;
-import java.io.File;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
-import static org.openqa.selenium.OutputType.*;
 
-public class Login {
+public class Login extends TestBase {
+
+    @Test
+    public void testLogin() throws InterruptedException {
+        login("vutam@sfamo.com", "q1234567Q");
+    }
+    /*
     ChromeDriver wd;
     
     @BeforeMethod
@@ -23,7 +21,7 @@ public class Login {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
-    
+
     @Test
     public void loginLKP() {
         wd.get("https://dev.ondoc.me/");
@@ -43,12 +41,5 @@ public class Login {
         wd.quit();
     }
     
-    public static boolean isAlertPresent(ChromeDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
+*/
 }
