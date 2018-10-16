@@ -68,13 +68,14 @@ public class TestBase {
         wd.findElement(By.id("icd-form-select_value")).clear();
         wd.findElement(By.id("icd-form-select_value")).sendKeys("it");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void createConsultation() throws InterruptedException {
         wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[1]/div")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
-        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]/div")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
+        wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']")).click();
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]/strong")).click();
+        wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']")).click();
         wd.findElement(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding")).click();
     }
 
@@ -88,10 +89,6 @@ public class TestBase {
         wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
     }
 
-    @AfterMethod
-     public void tearDown() {
-        //wd.quit();
-    }
 
     protected void conclusionOfResults(String conclusions) {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/textarea")).click();
@@ -198,6 +195,7 @@ public class TestBase {
         wd.findElement(By.id("icd-form-select_value")).clear();
         wd.findElement(By.id("icd-form-select_value")).sendKeys("Кариес");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void toothСondition() {
@@ -250,6 +248,7 @@ public class TestBase {
         wd.findElement(By.id("icd-form-select_value")).clear();
         wd.findElement(By.id("icd-form-select_value")).sendKeys("Имму");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[10]/div/div[2]")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void directionName(String name) {
@@ -336,5 +335,10 @@ public class TestBase {
         wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]")).click();
         wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']")).click();
         wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/p")).click();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        wd.quit();
     }
 }
