@@ -2,7 +2,7 @@ package ondoc.lkp;
 
 import org.testng.annotations.Test;
 
-public class CreateAnalysis extends TestBase{
+public class CreationAnalysis extends TestBase{
     
     @Test
     public void testCreateAnalysis() throws InterruptedException {

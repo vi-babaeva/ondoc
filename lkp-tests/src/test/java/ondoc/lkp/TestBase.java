@@ -13,7 +13,6 @@ public class TestBase {
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new ChromeDriver();
-        //wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.get("https://dev.ondoc.me/");
         login("patient.ondoc@mail.ru", "q1234567Q!");
@@ -28,8 +27,6 @@ public class TestBase {
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).clear();
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).sendKeys(password);
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/button")).click();
-        //wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        //wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
     }
 
     protected void save() {
@@ -74,14 +71,13 @@ public class TestBase {
     }
 
     protected void createConsultation() throws InterruptedException {
-        //wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        //wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")).click();
         wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[1]/div")).click();
         wd.findElement(By.cssSelector("strong.ng-scope")).click();
         wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]/div")).click();
         wd.findElement(By.cssSelector("strong.ng-scope")).click();
         wd.findElement(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding")).click();
     }
+
     protected void choseType() {
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")).click();
@@ -90,9 +86,6 @@ public class TestBase {
     protected void gotoMedcard() {
         wd.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
         wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
-        //wd.findElement(By.xpath("//*[contains(text(), 'Медицинская карта')]")).click();
-        //wd.findElement(By.cssSelector("a.sidebar__menu-link")).click();
-        //wd.findElement(By.linkText("Медицинская карта")).click();
     }
 
     @AfterMethod
@@ -159,5 +152,66 @@ public class TestBase {
         wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]")).click();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).click();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).clear();
+    }
+
+    protected void createDentisrty() {
+        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div")).click();
+        wd.findElement(By.cssSelector("strong.ng-scope")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]")).click();
+        wd.findElement(By.cssSelector("strong.ng-scope")).click();
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]")).click();
+    }
+
+    protected void conclusionTooth(String zakl) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).sendKeys(zakl);
+    }
+
+    protected void objectivelyTooth(String obj) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).sendKeys(obj);
+    }
+
+    protected void anamnesisTooth(String anam) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).sendKeys(anam);
+    }
+
+    protected void complaintsTooth(String zhalob) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).sendKeys(zhalob);
+    }
+
+    protected void diagnisisTooth(String diag) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).sendKeys(diag);
+    }
+
+    protected void MKBtooth() {
+        wd.findElement(By.id("icd-form-select_value")).click();
+        wd.findElement(By.id("icd-form-select_value")).clear();
+        wd.findElement(By.id("icd-form-select_value")).sendKeys("Кариес");
+        wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
+    }
+
+    protected void toothСondition() {
+        wd.findElement(By.linkText("Без изменений")).click();
+        wd.findElement(By.xpath("//div[@class='widget']//p[.='Вылечен']")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).sendKeys("Кариес");
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).sendKeys("Здоров");
+    }
+
+    protected void toothSelection27() {
+        wd.findElement(By.xpath("//table[@class='stoma-scheme']//span[.='27']")).click();
     }
 }
