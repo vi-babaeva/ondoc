@@ -117,7 +117,7 @@ public class TestBase {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div[2]/div/div[11]/input")).sendKeys(comment);
     }
 
-    protected void addIndicator() {
+    protected void add() {
         wd.findElement(By.linkText("Добавить")).click();
     }
 
@@ -213,5 +213,128 @@ public class TestBase {
 
     protected void toothSelection27() {
         wd.findElement(By.xpath("//table[@class='stoma-scheme']//span[.='27']")).click();
+    }
+
+    protected void recommendationsChekup(String rek) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[7]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[7]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[7]/div[2]/textarea")).sendKeys(rek);
+    }
+
+    protected void objectivelyChekup(String obj) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea")).sendKeys(obj);
+    }
+
+    protected void anamnesisChekup(String anam) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[5]/div[2]/textarea")).sendKeys(anam);
+    }
+
+    protected void complaintsChekup(String zhalob) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[4]/div[2]/textarea")).sendKeys(zhalob);
+    }
+
+    protected void diagnosisChekup(String diag) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[3]/input")).sendKeys(diag);
+    }
+
+    protected void MKBcheckup() {
+        wd.findElement(By.id("icd-form-select_value")).click();
+        wd.findElement(By.id("icd-form-select_value")).clear();
+        wd.findElement(By.id("icd-form-select_value")).sendKeys("Имму");
+        wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[10]/div/div[2]")).click();
+    }
+
+    protected void directionName(String name) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/input")).sendKeys(name);
+    }
+
+    protected void choseDirection() {
+        wd.findElement(By.id("direction-form-select_value")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[2]/direction-autocomplete/div/a")).click();
+        wd.findElement(By.xpath("//div[@class='clinic-directions__inner-wrapper']//span[.='Иммунология']")).click();
+    }
+
+    protected void createCheckup() {
+        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div")).click();
+        wd.findElement(By.cssSelector("strong.ng-scope")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]")).click();
+        wd.findElement(By.linkText("Выберите врача")).click();
+        wd.findElement(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding")).click();
+    }
+
+    protected void descriptionNote(String descr) {
+        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).click();
+        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).clear();
+        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).sendKeys(descr);
+    }
+
+    protected void nameNote(String name) {
+        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).click();
+        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).clear();
+        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).sendKeys(name);
+    }
+
+    protected void createNote() {
+        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[1]/div")).click();
+    }
+
+    protected void reactionAllergies(String reaction) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input")).sendKeys(reaction);
+    }
+
+    protected void nameAllergies(String name) {
+        wd.findElement(By.xpath("//div[@class='col-xs-17']/input")).click();
+        wd.findElement(By.xpath("//div[@class='col-xs-17']/input")).clear();
+        wd.findElement(By.xpath("//div[@class='col-xs-17']/input")).sendKeys(name);
+    }
+
+    protected void createAllergies() {
+        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[2]/div")).click();
+    }
+
+    protected void nameVaccine2(String name) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/input")).sendKeys(name);
+    }
+
+    protected void newData() {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/div/calendar/div[2]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/div/calendar/div[2]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/div/calendar/div[2]/input")).sendKeys("18.12.2019");
+    }
+
+    protected void nameVaccine(String name) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/input")).sendKeys(name);
+    }
+
+    protected void nameVaccination(String name) {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).click();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).clear();
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).sendKeys(name);
+    }
+
+    protected void createVaccination() {
+        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[4]/div/div")).click();
+        wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']")).click();
+        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]")).click();
+        wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']")).click();
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/p")).click();
     }
 }
