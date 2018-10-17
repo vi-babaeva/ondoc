@@ -2,7 +2,7 @@ package ondoc.lkp;
 
 import org.testng.annotations.Test;
 
-public class СreationDentistry extends TestBase {
+public class CreationDentistry extends TestBase {
 
     @Test
     public void testCreationDentistry() {

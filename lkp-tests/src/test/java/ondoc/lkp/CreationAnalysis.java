@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class CreationAnalysis extends TestBase{
     
     @Test
-    public void testCreateAnalysis() throws InterruptedException {
+    public void testCreateAnalysis() {
         gotoMedcard();
         choseType();
         createAnalysis();

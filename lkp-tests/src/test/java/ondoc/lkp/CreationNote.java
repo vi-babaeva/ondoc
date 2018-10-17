@@ -2,10 +2,10 @@ package ondoc.lkp;
 
 import org.testng.annotations.Test;
 
-public class СreationNote extends TestBase{
+public class CreationNote extends TestBase{
 
     @Test
-    public void testСreationNote() {
+    public void testCreationNote() {
         gotoMedcard();
         choseType();
         createNote();
