@@ -16,6 +16,6 @@ public class CreationVaccination extends TestBase  {
         newData();
         nameVaccine2("Гриппол");
         save();
-        commentInAllergies();
+        commentInVaccination();
     }
 }
