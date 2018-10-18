@@ -1,9 +1,6 @@
 package ondoc.lkp;
 
 import org.testng.annotations.Test;
-import org.openqa.selenium.*;
-
-import java.util.concurrent.TimeUnit;
 
 public class CreationCheckup extends TestBase{
 
@@ -13,8 +10,7 @@ public class CreationCheckup extends TestBase{
         choseType();
         createCheckup();
         choseDirection();
-        directionName("Иммунология");
-        wd.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+        directionName("Иммунограмма");
         MKBcheckup();
         diagnosisChekup("Пониженный иммунитет");
         complaintsChekup("Частые простудные заболевания, повышенная утомляемость, снижение работоспособности, постоянная сонливость, плохое настроение, раздражительность.");
@@ -24,6 +20,7 @@ public class CreationCheckup extends TestBase{
                 "Нормализовать режим дня. Особенно это касается баланса между отдыхом и активностью. Обязательно нужно обеспечить организму полноценный сон, чтобы он успел восстановиться.\n" +
                 "Рацион питания. Свежие фрукты, ягоды, овощи, зелень — кладезь витаминов и минералов. Нужно включать в рацион мясо, рыбу, кисломолочные продукты и растительные масла (особенно оливковое). Продукты с консервантами, красителями, стабилизаторами, повышенным количеством сахара и жиров лучше исключить или свести к минимуму.");
         save();
+        commentInChekup();
     }
 
 }

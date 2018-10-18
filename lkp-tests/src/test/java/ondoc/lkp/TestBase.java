@@ -1,10 +1,9 @@
 package ondoc.lkp;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -34,7 +33,6 @@ public class TestBase {
     }
 
     protected void save() {
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
         wd.findElement(By.xpath("//div[@class='widget']//button[.='Сохранить']")).click();
     }
 
@@ -73,7 +71,6 @@ public class TestBase {
         wd.findElement(By.id("icd-form-select_value")).clear();
         wd.findElement(By.id("icd-form-select_value")).sendKeys("it");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void createConsultation() throws InterruptedException {
@@ -85,12 +82,16 @@ public class TestBase {
     }
 
     protected void choseType() {
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        //wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        WebElement dynamicElement = (new WebDriverWait(wd,10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")));
         wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")).click();
     }
 
     protected void gotoMedcard() {
-        wd.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+        //необходимо добавить явное ожидание элемента
+        //wd.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+        WebElement dynamicElement = (new WebDriverWait(wd,10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")));
         wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
     }
 
@@ -139,6 +140,10 @@ public class TestBase {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[11]/input")).sendKeys(comment);
     }
 
+    protected  void  commentInAnalysis () {
+        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.cssSelector("buttton.r-button.r-button--blue-border")).click();
+    }
     protected void analysisName(String name) {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).sendKeys(name);
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input")).click();
@@ -198,30 +203,24 @@ public class TestBase {
     protected void MKBtooth() {
         wd.findElement(By.id("icd-form-select_value")).click();
         wd.findElement(By.id("icd-form-select_value")).clear();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.findElement(By.id("icd-form-select_value")).sendKeys("Кариес");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
     }
 
     protected void toothСondition() {
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.findElement(By.linkText("Без изменений")).click();
         wd.findElement(By.xpath("//div[@class='widget']//p[.='Вылечен']")).click();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).click();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).clear();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).sendKeys("Кариес");
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).click();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).clear();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).sendKeys("Здоров");
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void toothSelection27() {
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.findElement(By.xpath("//table[@class='stoma-scheme']//span[.='27']")).click();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void recommendationsChekup(String rek) {
@@ -259,7 +258,6 @@ public class TestBase {
         wd.findElement(By.id("icd-form-select_value")).clear();
         wd.findElement(By.id("icd-form-select_value")).sendKeys("Имму");
         wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[10]/div/div[2]")).click();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     protected void directionName(String name) {
@@ -348,8 +346,33 @@ public class TestBase {
         wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/p")).click();
     }
 
+    protected void commentInDentistry() {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.xpath("//div[1]/div/div[2]/div[7]/buttton[1]/strong")).click();
+    }
     @AfterMethod
     public void tearDown() {
         wd.quit();
     }
+
+    protected void commentInConsultation() {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.cssSelector("strong")).click();
+    }
+
+    protected void commentInChekup() {
+        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/exam-details/div/section/div/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.cssSelector("strong")).click();
+    }
+
+    protected void commentInAllergies() {
+        wd.findElement(By.xpath("//div[@class='margin-bottom-large']/div[2]/button")).click();
+        wd.findElement(By.cssSelector("strong")).click();
+    }
+
+    protected void commentInVaccination() {
+        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/vaccination-details/div/section/div/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.cssSelector("buttton.r-button.r-button--blue-border")).click();
+    }
+
 }

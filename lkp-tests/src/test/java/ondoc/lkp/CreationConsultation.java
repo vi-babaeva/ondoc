@@ -26,5 +26,7 @@ public class CreationConsultation extends TestBase {
                 "Избегать респираторных заболеваний\n" +
                 "Санаторно-курортное лечение – сероводородные и радоновые источники (Мацеста, Цхалубо и др.), солнечные ванны.");
         save();
+        commentInConsultation();
     }
+
 }

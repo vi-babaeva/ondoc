@@ -12,5 +12,6 @@ public class CreationAllergies extends TestBase {
         nameAllergies("Аллергия на лактозу");
         reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
         save();
+        commentInAllergies();
     }
 }
