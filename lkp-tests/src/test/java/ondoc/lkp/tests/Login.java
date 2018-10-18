@@ -1,4 +1,4 @@
-package ondoc.lkp;
+package ondoc.lkp.tests;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
