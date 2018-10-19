@@ -6,8 +6,8 @@ public class CreationCheckup extends TestBase{
 
     @Test
     public void testCreationCheckup() {
-        app.gotoMedcard();
-        app.choseType();
+        app.getNavigationHelper().gotoMedcard();
+        app.getNavigationHelper().choseType();
         app.createCheckup();
         app.choseDirection();
         app.directionName("Иммунограмма");
@@ -19,7 +19,7 @@ public class CreationCheckup extends TestBase{
         app.recommendationsChekup("Особое внимание нужно уделить витаминам группы В (особенно В 5), А, С, D, F, а также минералам — цинку, магнию, железу, марганцу, селену и йоду.\n" +
                 "Нормализовать режим дня. Особенно это касается баланса между отдыхом и активностью. Обязательно нужно обеспечить организму полноценный сон, чтобы он успел восстановиться.\n" +
                 "Рацион питания. Свежие фрукты, ягоды, овощи, зелень — кладезь витаминов и минералов. Нужно включать в рацион мясо, рыбу, кисломолочные продукты и растительные масла (особенно оливковое). Продукты с консервантами, красителями, стабилизаторами, повышенным количеством сахара и жиров лучше исключить или свести к минимуму.");
-        app.save();
+        app.getNavigationHelper().save();
         app.commentInChekup();
     }
 

@@ -1,24 +1,22 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     ChromeDriver wd;
 
-
     private ConsultationHelper consultationHelper;
+    private NavigationHelper navigationHelper;
 
     public void init() {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.get("https://dev.ondoc.me/");
         consultationHelper = new ConsultationHelper(wd);
+        navigationHelper = new NavigationHelper(wd);
         login("patient.ondoc@mail.ru", "q1234567Q!");
     }
 
@@ -31,22 +29,6 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).clear();
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).sendKeys(password);
         wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/button")).click();
-    }
-
-    public void save() {
-        wd.findElement(By.xpath("//div[@class='widget']//button[.='Сохранить']")).click();
-    }
-
-    public void choseType() {
-        WebElement dynamicElement = (new WebDriverWait(wd,10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")));
-        dynamicElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a")).click();
-    }
-
-    public void gotoMedcard() {
-        WebElement dynamicElement = (new WebDriverWait(wd,10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")));
-        dynamicElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
     }
 
     public void conclusionOfResults(String conclusions) {
@@ -72,10 +54,6 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div[2]/div/div[11]/input")).click();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div[2]/div/div[11]/input")).clear();
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div[2]/div/div[11]/input")).sendKeys(comment);
-    }
-
-    public void add() {
-        wd.findElement(By.linkText("Добавить")).click();
     }
 
     public void firstIndicator(String index, String result, String normValue, String units, String comment) {
@@ -332,5 +310,9 @@ public class ApplicationManager {
 
     public ConsultationHelper getConsultationHelper() {
         return consultationHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }

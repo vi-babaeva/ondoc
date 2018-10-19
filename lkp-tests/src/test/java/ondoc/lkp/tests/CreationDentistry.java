@@ -6,8 +6,8 @@ public class CreationDentistry extends TestBase {
 
     @Test
     public void testCreationDentistry() {
-        app.gotoMedcard();
-        app.choseType();
+        app.getNavigationHelper().gotoMedcard();
+        app.getNavigationHelper().choseType();
         app.createDentisrty();
         app.toothSelection27();
         app.toothСondition();
@@ -23,7 +23,7 @@ public class CreationDentistry extends TestBase {
                 "1) после лечения зуба от кариеса или пульпита возникла острая, приступообразная боль, возникающая самопроизвольно, а также боль, увеличивающаяся с течением времени;\n" +
                 "2) возникли неприятные ощущения во время приема сладких, кислых, холодных или горячих продуктов;\n" +
                 "3) после окончания действия анестезии пломба мешает смыканию зубов.");
-        app.save();
+        app.getNavigationHelper().save();
         app.commentInDentistry();
     }
 }

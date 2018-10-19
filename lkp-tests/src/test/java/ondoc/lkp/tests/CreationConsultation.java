@@ -6,8 +6,8 @@ public class CreationConsultation extends TestBase {
 
     @Test
     public void testCreateConsultation() throws InterruptedException {
-        app.gotoMedcard();
-        app.choseType();
+        app.getNavigationHelper().gotoMedcard();
+        app.getNavigationHelper().choseType();
         app.getConsultationHelper().createConsultation();
         app.getConsultationHelper().MKB();
         app.getConsultationHelper().diagnosis("Атопический дерматит");
@@ -25,7 +25,7 @@ public class CreationConsultation extends TestBase {
                 "Избегать стрессовых ситуаций\n" +
                 "Избегать респираторных заболеваний\n" +
                 "Санаторно-курортное лечение – сероводородные и радоновые источники (Мацеста, Цхалубо и др.), солнечные ванны.");
-        app.save();
+        app.getNavigationHelper().save();
         app.commentInConsultation();
     }
 

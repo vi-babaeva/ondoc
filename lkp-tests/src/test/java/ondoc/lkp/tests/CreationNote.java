@@ -6,8 +6,8 @@ public class CreationNote extends TestBase{
 
     @Test
     public void testCreationNote() {
-        app.gotoMedcard();
-        app.choseType();
+        app.getNavigationHelper().gotoMedcard();
+        app.getNavigationHelper().choseType();
         app.createNote();
         app.nameNote("LPG-массаж");
         app.descriptionNote("Lpg-массаж представляет собой метод аппаратного массажа. Разработан этот метод был в 70-х годах двадцатого века французским исследователем Луи Полем Гителем. Метод получил название от его инициалов.\n" +
@@ -17,6 +17,6 @@ public class CreationNote extends TestBase{
                 "Аппарат для этой процедуры представляет собой камеру со специальными насадками (манипулами). Манипулы имеют на конце ролики для вибромассажа. Манипулы захватывают или защипывают часть кожи со скоростью от 4 до 16 раз в секунду, а вакуум оказывает дополнительный эффект.\n" +
                 "\n" +
                 "Lpg-массаж проводят через индивидуальный спецкостюм (эндермологический комбинезон) для гигиеничного и безболезненного воздействия манипулы и лучшего захвата кожи.");
-        app.save();
+        app.getNavigationHelper().save();
     }
 }
