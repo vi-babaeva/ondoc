@@ -54,4 +54,9 @@ public class ConsultationHelper {
         wd.findElement(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']")).click();
         wd.findElement(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding")).click();
     }
+
+    public void commentInConsultation() {
+        wd.findElement(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")).click();
+        wd.findElement(By.cssSelector("strong")).click();
+    }
 }

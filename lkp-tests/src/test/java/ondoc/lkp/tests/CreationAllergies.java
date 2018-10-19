@@ -8,10 +8,10 @@ public class CreationAllergies extends TestBase {
     public void testCreationAllergies() {
         app.getNavigationHelper().gotoMedcard();
         app.getNavigationHelper().choseType();
-        app.createAllergies();
-        app.nameAllergies("Аллергия на лактозу");
-        app.reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
+        app.getAllergiesHelper().createAllergies();
+        app.getAllergiesHelper().nameAllergies("Аллергия на лактозу");
+        app.getAllergiesHelper().reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
         app.getNavigationHelper().save();
-        app.commentInAllergies();
+        app.getAllergiesHelper().commentInAllergies();
     }
 }
