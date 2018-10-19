@@ -2,7 +2,6 @@ package ondoc.lkp.tests;
 
 import org.testng.annotations.Test;
 
-
 public class CreationVaccination extends TestBase  {
     
     @Test
@@ -13,7 +12,7 @@ public class CreationVaccination extends TestBase  {
         app.nameVaccination("Прививка от гриппа");
         app.nameVaccine("Инфлювак");
         app.getNavigationHelper().add();
-        app.newData();
+        app.newDataVaccine2();
         app.nameVaccine2("Гриппол");
         app.getNavigationHelper().save();
         app.commentInVaccination();

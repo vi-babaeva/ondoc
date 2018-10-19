@@ -8,9 +8,9 @@ public class CreationNote extends TestBase{
     public void testCreationNote() {
         app.getNavigationHelper().gotoMedcard();
         app.getNavigationHelper().choseType();
-        app.createNote();
-        app.nameNote("LPG-массаж");
-        app.descriptionNote("Lpg-массаж представляет собой метод аппаратного массажа. Разработан этот метод был в 70-х годах двадцатого века французским исследователем Луи Полем Гителем. Метод получил название от его инициалов.\n" +
+        app.getNoteHelper().createNote();
+        app.getNoteHelper().nameNote("LPG-массаж");
+        app.getNoteHelper().descriptionNote("Lpg-массаж представляет собой метод аппаратного массажа. Разработан этот метод был в 70-х годах двадцатого века французским исследователем Луи Полем Гителем. Метод получил название от его инициалов.\n" +
                 "\n" +
                 "Принцип действия lpg-массажа основан на механическом воздействии на тело или лицо с помощью специальных насадок аппарата в двух направлениях — вакуумом и вибромассажем.\n" +
                 "\n" +
