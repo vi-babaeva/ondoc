@@ -4,77 +4,60 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
-public class DentistryHelper {
-    private ChromeDriver wd;
+public class DentistryHelper extends HelperBase {
 
     public DentistryHelper(ChromeDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void createDentisrty() {
-        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
+        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
+        click(By.cssSelector("strong.ng-scope"));
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        wd.findElement(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]")).click();
-        wd.findElement(By.cssSelector("strong.ng-scope")).click();
-        wd.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]")).click();
+        click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
+        click(By.cssSelector("strong.ng-scope"));
+        click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
     }
 
     public void conclusionTooth(String zakl) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea")).sendKeys(zakl);
+        type(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[5]/div[2]/textarea"), zakl);
     }
 
     public void objectivelyTooth(String obj) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea")).sendKeys(obj);
+        type(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[4]/div[2]/textarea"), obj);
     }
 
     public void anamnesisTooth(String anam) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea")).sendKeys(anam);
+        type(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[3]/div[2]/textarea"), anam);
     }
 
     public void complaintsTooth(String zhalob) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea")).sendKeys(zhalob);
+        type(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[2]/div[2]/textarea"), zhalob);
     }
 
     public void diagnisisTooth(String diag) {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input")).sendKeys(diag);
+        type(By.xpath("//div[@class='widget']/div[2]/div[4]/div[1]/div[1]/div[3]/input"), diag);
     }
 
     public void MKBtooth() {
-        wd.findElement(By.id("icd-form-select_value")).click();
-        wd.findElement(By.id("icd-form-select_value")).clear();
-        wd.findElement(By.id("icd-form-select_value")).sendKeys("Кариес");
-        wd.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
+        type(By.id("icd-form-select_value"), "Кариес");
+        click(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]"));
     }
 
     public void toothСondition() {
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
-        wd.findElement(By.linkText("Без изменений")).click();
-        wd.findElement(By.xpath("//div[@class='widget']//p[.='Вылечен']")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input")).sendKeys("Кариес");
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).click();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).clear();
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input")).sendKeys("Здоров");
+        click(By.linkText("Без изменений"));
+        click(By.xpath("//div[@class='widget']//p[.='Вылечен']"));
+        type(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input"), "Кариес");
+        type(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[2]/input"), "Здоров");
     }
 
     public void toothSelection27() {
-        wd.findElement(By.xpath("//table[@class='stoma-scheme']//span[.='27']")).click();
+        click(By.xpath("//table[@class='stoma-scheme']//span[.='27']"));
     }
 
     public void commentInDentistry() {
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")).click();
-        wd.findElement(By.xpath("//div[1]/div/div[2]/div[7]/buttton[1]/strong")).click();
+        click(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button"));
+        click(By.xpath("//div[1]/div/div[2]/div[7]/buttton[1]/strong"));
     }
 }

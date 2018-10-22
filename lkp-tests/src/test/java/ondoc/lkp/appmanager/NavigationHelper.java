@@ -6,15 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NavigationHelper {
-    private ChromeDriver wd;
+public class NavigationHelper extends HelperBase {
 
     public NavigationHelper(ChromeDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void save() {
-        wd.findElement(By.xpath("//div[@class='widget']//button[.='Сохранить']")).click();
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
     }
 
     public void choseType() {
@@ -30,6 +29,6 @@ public class NavigationHelper {
     }
 
     public void add() {
-        wd.findElement(By.linkText("Добавить")).click();
+        click(By.linkText("Добавить"));
     }
 }
