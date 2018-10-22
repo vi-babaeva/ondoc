@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NoteHelper {
-    ChromeDriver wd;
+    private ChromeDriver wd;
 
     public NoteHelper(ChromeDriver wd) {
         this.wd = wd;

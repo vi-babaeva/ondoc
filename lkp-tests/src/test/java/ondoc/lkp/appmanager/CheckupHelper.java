@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class CheckupHelper {
-    ChromeDriver wd;
+    private ChromeDriver wd;
 
     public CheckupHelper(ChromeDriver wd) {
         this.wd = wd;

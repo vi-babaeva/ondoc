@@ -5,7 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class VaccinationHelper {
-    ChromeDriver wd;
+    private ChromeDriver wd;
+
+    public VaccinationHelper(ChromeDriver wd) {
+        this.wd = wd;
+    }
 
     public void nameVaccine2(String name) {
         wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/input")).click();

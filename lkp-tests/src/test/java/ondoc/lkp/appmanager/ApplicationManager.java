@@ -1,11 +1,10 @@
 package ondoc.lkp.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager extends VaccinationHelper {
+public class ApplicationManager {
     ChromeDriver wd;
 
     private ConsultationHelper consultationHelper;
@@ -15,6 +14,8 @@ public class ApplicationManager extends VaccinationHelper {
     private CheckupHelper checkupHelper;
     private DentistryHelper dentistryHelper;
     private NoteHelper noteHelper;
+    private VaccinationHelper vaccinationHelper;
+    private SessionHelper sessionHelper;
 
     public void init() {
         wd = new ChromeDriver();
@@ -27,18 +28,9 @@ public class ApplicationManager extends VaccinationHelper {
         checkupHelper = new CheckupHelper(wd);
         dentistryHelper = new DentistryHelper(wd);
         noteHelper = new NoteHelper(wd);
-        login("patient.ondoc@mail.ru", "q1234567Q!");
-    }
-
-    public void login(String usermane, String password) {
-        wd.findElement(By.linkText("Войти")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).clear();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[1]/input")).sendKeys(usermane);
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).click();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).clear();
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/div[3]/div[2]/input")).sendKeys(password);
-        wd.findElement(By.xpath("//div[1]/main/div[1]/div/div[2]/form/button")).click();
+        vaccinationHelper = new VaccinationHelper(wd);
+        sessionHelper =  new SessionHelper(wd);
+        sessionHelper.login("patient.ondoc@mail.ru", "q1234567Q!");
     }
 
     public void stop() {
@@ -71,5 +63,13 @@ public class ApplicationManager extends VaccinationHelper {
 
     public NoteHelper getNoteHelper() {
         return noteHelper;
+    }
+
+    public VaccinationHelper getVaccinationHelper() {
+        return vaccinationHelper;
+    }
+
+    public SessionHelper getSessionHelper() {
+        return sessionHelper;
     }
 }

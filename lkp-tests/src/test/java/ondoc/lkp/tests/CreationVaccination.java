@@ -8,13 +8,13 @@ public class CreationVaccination extends TestBase  {
     public void testCreationVaccination () {
         app.getNavigationHelper().gotoMedcard();
         app.getNavigationHelper().choseType();
-        app.createVaccination();
-        app.nameVaccination("Прививка от гриппа");
-        app.nameVaccine("Инфлювак");
+        app.getVaccinationHelper().createVaccination();
+        app.getVaccinationHelper().nameVaccination("Прививка от гриппа");
+        app.getVaccinationHelper().nameVaccine("Инфлювак");
         app.getNavigationHelper().add();
-        app.newDataVaccine2();
-        app.nameVaccine2("Гриппол");
+        app.getVaccinationHelper().newDataVaccine2();
+        app.getVaccinationHelper().nameVaccine2("Гриппол");
         app.getNavigationHelper().save();
-        app.commentInVaccination();
+        app.getVaccinationHelper().commentInVaccination();
     }
 }
