@@ -3,26 +3,22 @@ package ondoc.lkp.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class NoteHelper {
-    private ChromeDriver wd;
+public class NoteHelper extends HelperBase {
 
     public NoteHelper(ChromeDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void descriptionNote(String descr) {
-        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).click();
-        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).clear();
-        wd.findElement(By.xpath("//div[@class='widget__textarea-wrapper']/textarea")).sendKeys(descr);
+        type(By.xpath("//div[@class='widget__textarea-wrapper']/textarea"), descr);
     }
 
     public void nameNote(String name) {
-        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).click();
-        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).clear();
-        wd.findElement(By.cssSelector("input.sc-dxgOiQ.jYQKwt")).sendKeys(name);
+        type(By.cssSelector("input.sc-dxgOiQ.jYQKwt"), name);
     }
 
     public void createNote() {
-        wd.findElement(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[1]/div")).click();
+        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[1]/div"));
     }
+
 }
