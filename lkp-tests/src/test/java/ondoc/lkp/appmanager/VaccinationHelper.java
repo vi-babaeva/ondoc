@@ -29,7 +29,7 @@ public class VaccinationHelper extends HelperBase {
     public void createVaccination() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[4]/div/div"));
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']"));
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']"));
         click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/p"));

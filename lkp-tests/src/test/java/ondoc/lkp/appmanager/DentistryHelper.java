@@ -13,7 +13,7 @@ public class DentistryHelper extends HelperBase {
     public void createDentisrty() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
         click(By.cssSelector("strong.ng-scope"));
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.cssSelector("strong.ng-scope"));
         click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
@@ -45,7 +45,7 @@ public class DentistryHelper extends HelperBase {
     }
 
     public void toothСondition() {
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        waiting(2, TimeUnit.MINUTES);
         click(By.linkText("Без изменений"));
         click(By.xpath("//div[@class='widget']//p[.='Вылечен']"));
         type(By.xpath("//div[@class='widget']/div[2]/div[3]/div[2]/div/div[3]/div[1]/input"), "Кариес");

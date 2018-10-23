@@ -39,17 +39,18 @@ public class AnalysisHelper extends HelperBase {
     public void analysisName(String name) {
         type(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"), name);
         click(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input"));
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input")).clear();
+        clear(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input"));
     }
 
     public void createAnalysis() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[2]/div"));
         click(By.cssSelector("strong.ng-scope"));
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.cssSelector("strong.ng-scope"));
         click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
         click(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"));
-        wd.findElement(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input")).clear();
+        clear(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"));
     }
+
 }

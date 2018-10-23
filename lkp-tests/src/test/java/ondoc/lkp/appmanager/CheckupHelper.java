@@ -14,7 +14,7 @@ public class CheckupHelper extends HelperBase {
     public void createCheckup() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div"));
         click(By.cssSelector("strong.ng-scope"));
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
+        waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.linkText("Выберите врача"));
         click(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding"));
