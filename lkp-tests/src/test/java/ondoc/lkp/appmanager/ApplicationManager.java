@@ -2,8 +2,6 @@ package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class ApplicationManager {
     ChromeDriver wd;
 
@@ -19,7 +17,6 @@ public class ApplicationManager {
 
     public void init() {
         wd = new ChromeDriver();
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
         wd.get("https://dev.ondoc.me/");
         consultationHelper = new ConsultationHelper(wd);
         navigationHelper = new NavigationHelper(wd);

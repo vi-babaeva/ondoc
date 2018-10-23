@@ -1,7 +1,12 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class AllergiesHelper extends HelperBase {
 
@@ -22,7 +27,40 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public void commentInAllergies() {
+        waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[@class='margin-bottom-large']/div[2]/button"));
         click(By.cssSelector("strong"));
+    }
+
+    public void deleteAllergies() {
+        wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span")).click();
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).isSelected()) {
+            wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).click();
+        }
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]"));
+        WebElement dynamicElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")));
+        dynamicElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")).click();
+
+        WebElement editElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/a/span")));
+        editElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/a/span")).click();
+
+        WebElement deleteElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")));
+        deleteElement.findElement(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")).click();
+
+        click(By.xpath("//div[@class='custom-modal__modal']//a[.='Удалить']"));
+
+        WebElement urlElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span")));
+
+        //доделать вывод результата не на консоль, а в idea
+        String url = wd.getCurrentUrl();
+        if (url.equals("https://dev.ondoc.me/medcard?type=allergy")) {
+            System.out.println("Delete - Passed");
+        } else {
+            System.out.println("Delete - Failed");
+        }
     }
 }
