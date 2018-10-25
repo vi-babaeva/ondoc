@@ -1,11 +1,11 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class ConsultationHelper extends HelperBase {
 
-    public ConsultationHelper(ChromeDriver wd) {
+    public ConsultationHelper(WebDriver wd) {
         super(wd);
     }
 

@@ -1,8 +1,8 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AllergiesHelper extends HelperBase {
 
-    public AllergiesHelper(ChromeDriver wd) {
+    public AllergiesHelper(WebDriver wd) {
         super(wd);
     }
 
@@ -38,9 +38,9 @@ public class AllergiesHelper extends HelperBase {
             wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).click();
         }
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]"));
-        WebElement dynamicElement = (new WebDriverWait(wd, 10))
+        WebElement medcardElement = (new WebDriverWait(wd, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")));
-        dynamicElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")).click();
+        medcardElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")).click();
 
         WebElement editElement = (new WebDriverWait(wd, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/a/span")));

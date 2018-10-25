@@ -1,12 +1,12 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import java.util.concurrent.TimeUnit;
 
 public class DentistryHelper extends HelperBase {
 
-    public DentistryHelper(ChromeDriver wd) {
+    public DentistryHelper(WebDriver wd) {
         super(wd);
     }
 

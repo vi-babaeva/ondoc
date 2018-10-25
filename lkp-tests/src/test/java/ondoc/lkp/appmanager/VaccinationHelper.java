@@ -1,12 +1,12 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import java.util.concurrent.TimeUnit;
 
 public class VaccinationHelper extends HelperBase {
 
-    public VaccinationHelper(ChromeDriver wd) {
+    public VaccinationHelper(WebDriver wd) {
         super(wd);
     }
 

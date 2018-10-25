@@ -1,9 +1,14 @@
 package ondoc.lkp.appmanager;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class ApplicationManager {
-    ChromeDriver wd;
+    WebDriver wd;
 
     private ConsultationHelper consultationHelper;
     private NavigationHelper navigationHelper;
@@ -14,9 +19,21 @@ public class ApplicationManager {
     private NoteHelper noteHelper;
     private VaccinationHelper vaccinationHelper;
     private SessionHelper sessionHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void init() {
-        wd = new ChromeDriver();
+        if (browser == BrowserType.CHROME) {
+            wd = new ChromeDriver();
+        } else if (browser == BrowserType.OPERA_BLINK) {
+            wd = new OperaDriver();
+        } else if (browser == BrowserType.SAFARI) {
+            wd = new SafariDriver();
+        }
+
         wd.get("https://dev.ondoc.me/");
         consultationHelper = new ConsultationHelper(wd);
         navigationHelper = new NavigationHelper(wd);

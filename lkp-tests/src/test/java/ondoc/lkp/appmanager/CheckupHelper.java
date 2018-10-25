@@ -1,12 +1,12 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import java.util.concurrent.TimeUnit;
 
 public class CheckupHelper extends HelperBase {
 
-    public CheckupHelper(ChromeDriver wd) {
+    public CheckupHelper(WebDriver wd) {
         super(wd);
     }
 

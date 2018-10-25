@@ -1,11 +1,11 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class NoteHelper extends HelperBase {
 
-    public NoteHelper(ChromeDriver wd) {
+    public NoteHelper(WebDriver wd) {
         super(wd);
     }
 
