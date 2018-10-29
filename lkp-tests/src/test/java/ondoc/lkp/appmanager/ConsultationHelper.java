@@ -12,6 +12,12 @@ public class ConsultationHelper extends HelperBase {
         super(wd);
     }
 
+    private class Elements {
+        private static final String REC_CONSULTATION = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div";
+        private static final String EDIT = "//div[@class='widget']/div[1]/div/div[3]/a/span";
+        private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+    }
+
     public void recommendations(String recomendadions) {
         type(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea"), recomendadions);
     }
@@ -37,7 +43,6 @@ public class ConsultationHelper extends HelperBase {
         WebElement mkbElement = (new WebDriverWait(wd, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")));
         mkbElement.findElement(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]")).click();
-        //click(By.xpath("//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]"));
     }
 
     public void createConsultation() throws InterruptedException {
@@ -54,15 +59,20 @@ public class ConsultationHelper extends HelperBase {
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/a")));
         docElement.findElement(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/a")).click();
 
-        //click(By.cssSelector("a.medcard-doctor__doc-name.ng-binding"));
     }
 
     public void commentInConsultation() {
         WebElement comElement = (new WebDriverWait(wd, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")));
         comElement.findElement(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button")).click();
-        //click(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button"));
         click(By.cssSelector("strong"));
+    }
+
+    public void findAndClick(String elementPath) {
+        By locator = By.xpath(elementPath);
+        WebElement medcardElement = (new WebDriverWait(wd, 20))
+                .until(ExpectedConditions.elementToBeClickable(locator));
+        medcardElement.findElement(locator).click();
     }
 
     public void deleteConsultation() {
@@ -70,21 +80,13 @@ public class ConsultationHelper extends HelperBase {
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input"));
         }
-
-        WebElement medcardElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div")));
-        medcardElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div")).click();
-
-        WebElement editElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[1]/div/div[3]/a/span")));
-        editElement.findElement(By.xpath("//div[@class='widget']/div[1]/div/div[3]/a/span")).click();
-
-        WebElement deleteElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")));
-        deleteElement.findElement(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")).click();
-
+        findAndClick(Elements.REC_CONSULTATION);
+        findAndClick(Elements.EDIT);
+        findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
 
     }
+
+
 
 }
