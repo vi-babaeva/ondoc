@@ -2,40 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="908e0b8f-e21e-4fa9-a0d3-4547f36af7ce" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationAllergies.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationAnalysis.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationCheckup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationConsultation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationDentistry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationNote.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/CreationVaccination.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteAllergies.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteAnalysis.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteCheckup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteConsultation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteDentistry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteNote.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/DeleteVaccination.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationAllergies.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAllergies.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationAnalysis.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAnalysis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationCheckup.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationCheckup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationConsultation.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationConsultation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationDentistry.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationDentistry.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationNote.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationNote.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/CreationVaccination.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationVaccination.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteAllergies.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAllergies.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteAnalysis.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAnalysis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteCheckup.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteCheckup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteConsultation.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteConsultation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteDentistry.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteDentistry.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteNote.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteNote.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/DeleteVaccination.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteVaccination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/appmanager/DentistryHelper.class" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/appmanager/DentistryHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/appmanager/NavigationHelper.class" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/appmanager/NavigationHelper.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/ModificationAllergies.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/ModificationAllergies.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAllergies.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" />
     </list>
     <ignored path="$PROJECT_DIR$/lkp-tests/.gradle/" />
@@ -67,7 +36,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsultationHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsultationHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
@@ -89,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/HelperBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -102,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+      <file leaf-file-name="AnalysisHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="115">
+              <caret line="30" column="99" lean-forward="true" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -492,8 +461,8 @@
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAllergies.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" />
       </list>
     </option>
   </component>
@@ -603,6 +572,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lkp-tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lkp-tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lkp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modification" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,73 +750,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CreationConsultation">
-    <configuration default="false" name="DeleteDentistry" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.delete.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="lkp-tests_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.delete" />
-      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.delete.DeleteDentistry" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="DeleteNote" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.delete.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="lkp-tests_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.delete" />
-      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.delete.DeleteNote" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.ondoc.lkp.tests.delete">
     <configuration default="false" name="DeleteVaccination" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -896,6 +833,72 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ondoc.lkp.tests.creation" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ondoc.lkp.tests.creation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lkp-tests_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.creation" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ondoc.lkp.tests.delete" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ondoc.lkp.tests.delete.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lkp-tests_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.delete" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
@@ -1118,19 +1121,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.DeleteDentistry" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.DeleteNote" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.DeleteVaccination" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.DeleteAnalysis" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.CreationConsultation" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.DeleteVaccination" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.DeleteAnalysis" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.CreationConsultation" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.ondoc.lkp.tests.creation" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.ondoc.lkp.tests.delete" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.CreationConsultation" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.DeleteAnalysis" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.DeleteVaccination" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.DeleteNote" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.DeleteDentistry" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.ondoc.lkp.tests.delete" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ondoc.lkp.tests.creation" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.CreationConsultation" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.DeleteAnalysis" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.DeleteVaccination" />
       </list>
     </recent_temporary>
   </component>
@@ -1148,12 +1151,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CreationConsultation - 2018.10.29 at 18h 32m 23s.xml">
-      <configuration name="CreationConsultation" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CreationConsultation - 2018.10.29 at 18h 35m 21s.xml">
-      <configuration name="CreationConsultation" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="CreationConsultation - 2018.10.29 at 18h 36m 51s.xml">
       <configuration name="CreationConsultation" configurationId="TestNG" />
     </history-entry>
@@ -1178,6 +1175,12 @@
     <history-entry file="CreationConsultation - 2018.10.29 at 18h 48m 22s.xml">
       <configuration name="CreationConsultation" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ondoc_lkp_tests_creation - 2018.10.29 at 18h 54m 45s.xml">
+      <configuration name="ondoc.lkp.tests.creation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ondoc_lkp_tests_delete - 2018.10.29 at 18h 56m 18s.xml">
+      <configuration name="ondoc.lkp.tests.delete" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1441" y="23" width="1919" height="1051" extended-state="6" />
@@ -1200,7 +1203,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35845214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35845214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18863992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1462,16 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" column="141" lean-forward="false" selection-start-line="61" selection-start-column="141" selection-end-line="61" selection-end-column="141" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteNote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1498,7 +1491,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/ModificationAllergies.java">
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAllergies.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -1583,12 +1576,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="269">
+          <caret line="62" column="110" lean-forward="false" selection-start-line="62" selection-start-column="110" selection-end-line="62" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="30" column="99" lean-forward="true" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1601,14 +1614,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#346#347#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="62" column="110" lean-forward="false" selection-start-line="62" selection-start-column="110" selection-end-line="62" selection-end-column="110" />
-          <folding />
         </state>
       </provider>
     </entry>
