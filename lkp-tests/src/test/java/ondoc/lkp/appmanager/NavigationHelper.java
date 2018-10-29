@@ -23,7 +23,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void gotoMedcard() {
-        WebElement medcardElement = (new WebDriverWait(wd,10))
+        WebElement medcardElement = (new WebDriverWait(wd,20))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")));
         medcardElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a")).click();
     }

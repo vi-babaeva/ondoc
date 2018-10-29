@@ -16,10 +16,10 @@ public class DentistryHelper extends HelperBase {
 
     public void createDentisrty() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
-        click(By.cssSelector("strong.ng-scope"));
+        click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']"));
         waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
-        click(By.cssSelector("strong.ng-scope"));
+        click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']"));
         click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
     }
 

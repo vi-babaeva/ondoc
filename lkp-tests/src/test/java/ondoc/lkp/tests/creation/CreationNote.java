@@ -1,8 +1,9 @@
-package ondoc.lkp.tests;
+package ondoc.lkp.tests.creation;
 
+import ondoc.lkp.tests.TestBase;
 import org.testng.annotations.Test;
 
-public class CreationNote extends TestBase{
+public class CreationNote extends TestBase {
 
     @Test
     public void testCreationNote() {

@@ -1,5 +1,6 @@
-package ondoc.lkp.tests;
+package ondoc.lkp.tests.delete;
 
+import ondoc.lkp.tests.TestBase;
 import org.testng.annotations.Test;
 
 public class DeleteConsultation extends TestBase {
