@@ -2,6 +2,10 @@ package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 public class DentistryHelper extends HelperBase {
@@ -60,4 +64,27 @@ public class DentistryHelper extends HelperBase {
         click(By.xpath("//div[@class='widget']/div[2]/medcard-comments-list/div/div[2]/button"));
         click(By.xpath("//div[1]/div/div[2]/div[7]/buttton[1]/strong"));
     }
+
+    public void deleteDentistry() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input"));
+        }
+
+        WebElement medcardElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]")));
+        medcardElement.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]")).click();
+
+        WebElement editElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[1]/div/div[3]/a/span")));
+        editElement.findElement(By.xpath("//div[@class='widget']/div[1]/div/div[3]/a/span")).click();
+
+        WebElement deleteElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")));
+        deleteElement.findElement(By.xpath("//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input")).click();
+
+        click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+
+    }
+
 }
