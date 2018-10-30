@@ -1,6 +1,7 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,8 +35,17 @@ public class HelperBase {
 
     public void findAndClick(String elementPath) {
         By locator = By.xpath(elementPath);
-        WebElement medcardElement = (new WebDriverWait(wd, 20))
+        WebElement mcElement = (new WebDriverWait(wd, 60))
                 .until(ExpectedConditions.elementToBeClickable(locator));
-        medcardElement.findElement(locator).click();
+        mcElement.findElement(locator).click();
+    }
+
+    protected boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
     }
 }

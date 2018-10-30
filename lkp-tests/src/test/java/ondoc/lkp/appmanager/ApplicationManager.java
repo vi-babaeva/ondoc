@@ -6,6 +6,8 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.Objects;
+
 public class ApplicationManager {
     WebDriver wd;
 
@@ -25,11 +27,11 @@ public class ApplicationManager {
     }
 
     public void init() {
-        if (browser == BrowserType.CHROME) {
+        if (Objects.equals(browser, BrowserType.CHROME)) {
             wd = new ChromeDriver();
-        } else if (browser == BrowserType.OPERA_BLINK) {
+        } else if (Objects.equals(browser, BrowserType.OPERA_BLINK)) {
             wd = new OperaDriver();
-        } else if (browser == BrowserType.SAFARI) {
+        } else if ( Objects.equals(browser, BrowserType.SAFARI)) {
             wd = new SafariDriver();
         }
 

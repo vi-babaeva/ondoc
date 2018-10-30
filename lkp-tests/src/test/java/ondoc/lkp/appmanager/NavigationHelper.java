@@ -9,7 +9,7 @@ public class NavigationHelper extends HelperBase {
         super(wd);
     }
 
-    private class Elements {
+    public class Elements {
         private static final String MEDCARD = "//div[2]/user-layout/div/div/div/aside/div[1]/div[4]/ul/li[2]/a";
         private static final String CHOSE_TYPE = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a";
     }
