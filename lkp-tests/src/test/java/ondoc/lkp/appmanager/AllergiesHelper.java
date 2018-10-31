@@ -1,7 +1,6 @@
 package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,6 +24,21 @@ public class AllergiesHelper extends HelperBase {
         type(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input"), reaction);
     }
 
+    public void createFullAllergies() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createAllergies();
+        nameAllergies("Аллергия на лактозу");
+        reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+        commentInAllergies();
+    }
+
+    public boolean isThereAllergies() {
+        WebElement allergElement = (new WebDriverWait(wd, 60))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")));
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
+    }
+
     public void nameAllergies(String name) {
         type(By.xpath("//div[@class='col-xs-17']/input"), name);
     }
@@ -37,19 +51,6 @@ public class AllergiesHelper extends HelperBase {
         waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[@class='margin-bottom-large']/div[2]/button"));
         click(By.cssSelector("strong"));
-    }
-
-    public void createFullAllergies() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
-        createAllergies();
-        nameAllergies("Аллергия на лактозу");
-        reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
-        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
-        commentInAllergies();
-    }
-
-    public boolean isThereAllergies() {
-        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
     }
 
     public void deleteAllergies() {

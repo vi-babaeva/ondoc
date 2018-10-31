@@ -31,7 +31,7 @@ public class ApplicationManager {
             wd = new ChromeDriver();
         } else if (Objects.equals(browser, BrowserType.OPERA_BLINK)) {
             wd = new OperaDriver();
-        } else if ( Objects.equals(browser, BrowserType.SAFARI)) {
+        } else if (Objects.equals(browser, BrowserType.SAFARI)) {
             wd = new SafariDriver();
         }
 
