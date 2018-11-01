@@ -34,7 +34,7 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public boolean isThereAllergies() {
-        WebElement allergElement = (new WebDriverWait(wd, 60))
+        WebElement allergElement = (new WebDriverWait(wd, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")));
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
     }
