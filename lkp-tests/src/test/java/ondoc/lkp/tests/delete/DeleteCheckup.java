@@ -8,6 +8,10 @@ public class DeleteCheckup extends TestBase {
     @Test
     public void testDeleteCheckup() {
         app.getNavigationHelper().gotoMedcard();
+        if (!app.getCheckupHelper().isThereCheckup()) {
+            app.getCheckupHelper().createFullCheckup();
+            app.getNavigationHelper().gotoMedcard();
+        }
         app.getCheckupHelper().deleteCheckup();
     }
 }

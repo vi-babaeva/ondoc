@@ -2,6 +2,10 @@ package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 public class AnalysisHelper extends HelperBase {
@@ -14,6 +18,22 @@ public class AnalysisHelper extends HelperBase {
         private static final String REC_ANALYSIS = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong";
         private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[1]/div/div[3]/a/span";
         private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+    }
+
+    public void createFullAnalysis() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createAnalysis();
+        analysisName("Коагулограмма");
+        firstIndicator("Протромбиновое время", "13.5", "9.0 - 15.0", "cек", "good");
+        conclusionOfResults("Количество тромбоцитов в норме. Сосудисто-тромбоцитарный гемостаз в норме. Нормокоагуляция по внешнему и внутреннему пути активации плазменного гемостаза. Конечные этапы свертывания в норме. Активность антикоагулянтов и состояние фибринолитической системы в норме. Показатели коагулограммы в пределах физиологической нормы.");
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+        commentInAnalysis();
+    }
+
+    public boolean isThereAnalysis() {
+        WebElement analysisElement = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong")));
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong"));
     }
 
     public void conclusionOfResults(String conclusions) {
@@ -36,7 +56,7 @@ public class AnalysisHelper extends HelperBase {
         type(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[11]/input"), comment);
     }
 
-    public   void  commentInAnalysis () {
+    public void commentInAnalysis () {
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[2]/medcard-comments-list/div/div[2]/button"));
         click(By.cssSelector("buttton.r-button.r-button--blue-border"));
     }

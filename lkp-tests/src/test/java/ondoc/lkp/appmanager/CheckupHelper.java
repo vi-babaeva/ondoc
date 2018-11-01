@@ -2,6 +2,10 @@ package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 public class CheckupHelper extends HelperBase {
@@ -14,6 +18,23 @@ public class CheckupHelper extends HelperBase {
         private static final String REC_CHECKUP = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]";
         private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/exam-details/div/section/div/div[1]/div/div[3]/a/span";
         private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+    }
+
+    public boolean isThereCheckup() {
+        WebElement checkupRecording = (new WebDriverWait(wd, 10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]")));
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
+    }
+
+    public void createFullCheckup() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createCheckup();
+        choseDirection();
+        directionName("Иммунограмма");
+        MKBcheckup();
+        diagnosisChekup("Пониженный иммунитет");
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+        commentInChekup();
     }
 
         public void createCheckup() {

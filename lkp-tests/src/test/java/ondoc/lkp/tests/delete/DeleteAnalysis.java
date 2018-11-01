@@ -8,6 +8,10 @@ public class DeleteAnalysis extends TestBase {
     @Test
     public void testDeleteAnalysis() {
         app.getNavigationHelper().gotoMedcard();
+        if (!app.getAnalysisHelper().isThereAnalysis()) {
+            app.getAnalysisHelper().createFullAnalysis();
+            app.getNavigationHelper().gotoMedcard();
+        }
         app.getAnalysisHelper().deleteAnalysis();
     }
 }
