@@ -8,7 +8,7 @@ public class DeleteAllergies extends TestBase {
     @Test
     public void testDeleteAllergies() {
         app.getNavigationHelper().gotoMedcard();
-        if (!app.getAllergiesHelper().isThereAllergies()) {
+        if (! app.getAllergiesHelper().isThereAllergies()) {
             app.getAllergiesHelper().createFullAllergies();
             app.getNavigationHelper().gotoMedcard();
         }

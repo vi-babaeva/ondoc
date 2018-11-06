@@ -1,9 +1,6 @@
 package ondoc.lkp.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +13,7 @@ public class HelperBase {
     }
 
     protected void click(By locator) {
+        waiting(1, TimeUnit.MINUTES);
         wd.findElement(locator).click();
     }
 
@@ -35,16 +33,26 @@ public class HelperBase {
 
     public void findAndClick(String elementPath) {
         By locator = By.xpath(elementPath);
-        WebElement medcElement = (new WebDriverWait(wd, 60))
+        WebElement medcElement = (new WebDriverWait(wd, 20))
                 .until(ExpectedConditions.elementToBeClickable(locator));
+        waiting(1, TimeUnit.MINUTES);
         medcElement.findElement(locator).click();
     }
 
-    protected boolean isElementPresent(By locator) {
+    public boolean isElementPresent(By locator) {
         try {
             wd.findElement(locator);
             return true;
         } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
+    public boolean isAlertPresent() {
+        try {
+            wd.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
             return false;
         }
     }

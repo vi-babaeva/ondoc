@@ -6,12 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class AllergiesHelper extends HelperBase {
 
     public AllergiesHelper(WebDriver wd) {
         super(wd);
+    }
+
+    private File pdf;
+
+    public File getPdf() {
+        return pdf;
+    }
+
+    public void setPdf(File pdf) {
+        this.pdf = pdf;
     }
 
     private class Elements {
@@ -34,8 +45,8 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public boolean isThereAllergies() {
-        WebElement allergElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div")));
+        goToInsertAllergies();
+        waiting(8, TimeUnit.SECONDS);
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
     }
 
@@ -48,16 +59,13 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public void commentInAllergies() {
-        waiting(2, TimeUnit.MINUTES);
+        waiting(1, TimeUnit.MINUTES);
         click(By.xpath("//div[@class='margin-bottom-large']/div[2]/button"));
         click(By.cssSelector("strong"));
     }
 
     public void deleteAllergies() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input"));
-        }
+        goToInsertAllergies();
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]"));
         findAndClick(Elements.REC_ALLERG);
         findAndClick(Elements.EDIT);
@@ -73,6 +81,18 @@ public class AllergiesHelper extends HelperBase {
             System.out.println("Delete - Passed");
         } else {
             System.out.println("Delete - Failed");
+        }
+    }
+
+    public void attachDocument() {
+        click(By.xpath("//div[@class='widget']/div[2]/div[2]/files-attachment/div/label/span"));
+
+    }
+
+    private void goToInsertAllergies() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input"));
         }
     }
 }

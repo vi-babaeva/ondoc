@@ -18,6 +18,7 @@ public class AnalysisHelper extends HelperBase {
         private static final String REC_ANALYSIS = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong";
         private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[1]/div/div[3]/a/span";
         private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+
     }
 
     public void createFullAnalysis() {
@@ -31,9 +32,9 @@ public class AnalysisHelper extends HelperBase {
     }
 
     public boolean isThereAnalysis() {
-        WebElement analysisElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong")));
-        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong"));
+        goToInsertAnalysis();
+        waiting(8, TimeUnit.SECONDS);
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
     }
 
     public void conclusionOfResults(String conclusions) {
@@ -70,7 +71,7 @@ public class AnalysisHelper extends HelperBase {
     public void createAnalysis() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[2]/div"));
         click(By.cssSelector("strong.ng-scope"));
-        waiting(2, TimeUnit.MINUTES);
+        waiting(1, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.cssSelector("strong.ng-scope"));
         click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
@@ -79,13 +80,17 @@ public class AnalysisHelper extends HelperBase {
     }
 
     public void deleteAnalysis() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input"));
-        }
+        goToInsertAnalysis();
         findAndClick(Elements.REC_ANALYSIS);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+    }
+
+    private void goToInsertAnalysis() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input"));
+        }
     }
 }

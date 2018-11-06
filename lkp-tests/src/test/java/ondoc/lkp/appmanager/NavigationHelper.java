@@ -3,6 +3,8 @@ package ondoc.lkp.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class NavigationHelper extends HelperBase {
 
     public NavigationHelper(WebDriver wd) {
@@ -23,6 +25,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void gotoMedcard() {
+        waiting(1, TimeUnit.MINUTES);
         findAndClick(Elements.MEDCARD);
     }
 

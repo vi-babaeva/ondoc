@@ -21,9 +21,9 @@ public class CheckupHelper extends HelperBase {
     }
 
     public boolean isThereCheckup() {
-        WebElement checkupRecording = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]")));
-        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
+        goToInsertCheckup();
+        waiting(8, TimeUnit.SECONDS);
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div"));
     }
 
     public void createFullCheckup() {
@@ -40,7 +40,7 @@ public class CheckupHelper extends HelperBase {
         public void createCheckup() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div"));
         click(By.cssSelector("strong.ng-scope"));
-        waiting(2, TimeUnit.MINUTES);
+        waiting(1, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
         click(By.linkText("Выберите врача"));
         click(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding"));
@@ -87,13 +87,17 @@ public class CheckupHelper extends HelperBase {
     }
 
     public void deleteCheckup() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input"));
-        }
+        goToInsertCheckup();
         findAndClick(Elements.REC_CHECKUP);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+    }
+
+    private void goToInsertCheckup() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input"));
+        }
     }
 }

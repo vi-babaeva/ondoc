@@ -6,6 +6,7 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ApplicationManager {
@@ -21,6 +22,8 @@ public class ApplicationManager {
     private VaccinationHelper vaccinationHelper;
     private SessionHelper sessionHelper;
     private String browser;
+
+
 
     public ApplicationManager(String browser) {
         this.browser = browser;

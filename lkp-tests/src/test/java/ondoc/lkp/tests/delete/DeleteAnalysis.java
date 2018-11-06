@@ -8,7 +8,7 @@ public class DeleteAnalysis extends TestBase {
     @Test
     public void testDeleteAnalysis() {
         app.getNavigationHelper().gotoMedcard();
-        if (!app.getAnalysisHelper().isThereAnalysis()) {
+        if (! app.getAnalysisHelper().isThereAnalysis()) {
             app.getAnalysisHelper().createFullAnalysis();
             app.getNavigationHelper().gotoMedcard();
         }
