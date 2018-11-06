@@ -64,9 +64,16 @@ public class AllergiesHelper extends HelperBase {
         click(By.cssSelector("strong"));
     }
 
+    public  void modificationAllergies() {
+        goToInsertAllergies();
+        findAndClick(Elements.REC_ALLERG);
+        findAndClick(Elements.EDIT);
+        type(By.xpath("//div[@class='col-xs-17']/input"), "Аллергия на шоколад");
+        type(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input"), "Красные пятна на коже");
+    }
+
     public void deleteAllergies() {
         goToInsertAllergies();
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]"));
         findAndClick(Elements.REC_ALLERG);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
