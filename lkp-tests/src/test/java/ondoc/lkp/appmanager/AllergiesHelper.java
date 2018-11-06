@@ -15,20 +15,15 @@ public class AllergiesHelper extends HelperBase {
         super(wd);
     }
 
-    private File pdf;
-
-    public File getPdf() {
-        return pdf;
-    }
-
-    public void setPdf(File pdf) {
-        this.pdf = pdf;
-    }
-
     private class Elements {
         private static final String REC_ALLERG = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div";
         private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/a/span";
         private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+    }
+
+    public int getAllergiesCount() {
+        //return wd.findElements(By.className("ng-scope")).size();
+        return wd.findElements(By.cssSelector("strong.font-medium")).size();
     }
 
     public void reactionAllergies(String reaction) {
@@ -46,7 +41,7 @@ public class AllergiesHelper extends HelperBase {
 
     public boolean isThereAllergies() {
         goToInsertAllergies();
-        waiting(8, TimeUnit.SECONDS);
+        waiting(15, TimeUnit.SECONDS);
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
     }
 
@@ -96,10 +91,27 @@ public class AllergiesHelper extends HelperBase {
 
     }
 
-    private void goToInsertAllergies() {
+    public void goToInsertAllergies() {
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span"));
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input"));
         }
     }
+
+    private File pdf;
+
+    public File getPdf() {
+        return pdf;
+    }
+
+    public void setPdf(File pdf) {
+        this.pdf = pdf;
+    }
+
 }
+
+
+
+
+
+

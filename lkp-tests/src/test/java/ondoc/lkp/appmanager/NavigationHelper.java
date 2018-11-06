@@ -21,12 +21,19 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void choseType() {
+        waiting(10, TimeUnit.SECONDS);
         findAndClick(Elements.CHOSE_TYPE);
     }
 
     public void gotoMedcard() {
         waiting(1, TimeUnit.MINUTES);
         findAndClick(Elements.MEDCARD);
+    }
+
+    public void backToList() {
+        click(By.linkText("Назад к списку"));
+        wd.navigate().refresh();
+        waiting(1, TimeUnit.MINUTES);
     }
 
     public void add() {
