@@ -1,6 +1,7 @@
 package ondoc.lkp.tests.creation;
 
 import ondoc.lkp.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreationCheckup extends TestBase {
@@ -8,6 +9,8 @@ public class CreationCheckup extends TestBase {
     @Test
     public void testCreationCheckup() {
         app.getNavigationHelper().gotoMedcard();
+        app.getCheckupHelper().goToInsertCheckup();
+        int before = app.getCheckupHelper().getCheckupCount();
         app.getNavigationHelper().choseType();
         app.getCheckupHelper().createCheckup();
         app.getCheckupHelper().choseDirection();
@@ -21,7 +24,8 @@ public class CreationCheckup extends TestBase {
                 "Нормализовать режим дня. Особенно это касается баланса между отдыхом и активностью. Обязательно нужно обеспечить организму полноценный сон, чтобы он успел восстановиться.\n" +
                 "Рацион питания. Свежие фрукты, ягоды, овощи, зелень — кладезь витаминов и минералов. Нужно включать в рацион мясо, рыбу, кисломолочные продукты и растительные масла (особенно оливковое). Продукты с консервантами, красителями, стабилизаторами, повышенным количеством сахара и жиров лучше исключить или свести к минимуму.");
         app.getNavigationHelper().save();
-        app.getCheckupHelper().commentInChekup();
+        app.getNavigationHelper().backToList();
+        int after = app.getCheckupHelper().getCheckupCount();
+        Assert.assertEquals(after, before + 1);
     }
-
 }

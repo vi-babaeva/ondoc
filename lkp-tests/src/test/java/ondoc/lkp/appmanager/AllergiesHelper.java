@@ -22,7 +22,6 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public int getAllergiesCount() {
-        //return wd.findElements(By.className("ng-scope")).size();
         return wd.findElements(By.cssSelector("strong.font-medium")).size();
     }
 

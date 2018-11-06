@@ -87,10 +87,14 @@ public class AnalysisHelper extends HelperBase {
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
     }
 
-    private void goToInsertAnalysis() {
+    public void goToInsertAnalysis() {
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/span"));
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input"));
         }
+    }
+
+    public int getAnalysisCount() {
+        return wd.findElements(By.cssSelector("div.text-overflow.ng-binding")).size();
     }
 }

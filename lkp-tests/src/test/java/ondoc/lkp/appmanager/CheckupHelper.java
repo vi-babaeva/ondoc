@@ -94,10 +94,14 @@ public class CheckupHelper extends HelperBase {
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
     }
 
-    private void goToInsertCheckup() {
+    public void goToInsertCheckup() {
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/span"));
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[5]/input"));
         }
+    }
+
+    public int getCheckupCount() {
+        return wd.findElements(By.cssSelector("div.text-overflow.ng-binding")).size();
     }
 }

@@ -33,9 +33,9 @@ public class HelperBase {
 
     public void findAndClick(String elementPath) {
         By locator = By.xpath(elementPath);
+        waiting(1, TimeUnit.MINUTES);
         WebElement medcElement = (new WebDriverWait(wd, 20))
                 .until(ExpectedConditions.elementToBeClickable(locator));
-        waiting(1, TimeUnit.MINUTES);
         medcElement.findElement(locator).click();
     }
 

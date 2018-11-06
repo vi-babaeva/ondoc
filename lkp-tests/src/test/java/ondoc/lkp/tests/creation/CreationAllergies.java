@@ -18,7 +18,6 @@ public class CreationAllergies extends TestBase {
         app.getAllergiesHelper().nameAllergies("Аллергия на лактозу");
         app.getAllergiesHelper().reactionAllergies("Сыпь на коже в виде крапивницы, дерматита, экземы. Одышка, насморк, чихание, бронхиальная астма, отек Квинке.");
         app.getNavigationHelper().save();
-        //app.getAllergiesHelper().commentInAllergies();
         app.getNavigationHelper().backToList();
         int after = app.getAllergiesHelper().getAllergiesCount();
         Assert.assertEquals(after, before + 1);
