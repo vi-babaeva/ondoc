@@ -8,6 +8,10 @@ public class DeleteDentistry extends TestBase {
     @Test
     public void testDeleteDentistry() {
         app.getNavigationHelper().gotoMedcard();
+        if (! app.getDentistryHelper().isThereDentistry()) {
+            app.getDentistryHelper().createFullDentisrty();
+            app.getNavigationHelper().gotoMedcard();
+        }
         app.getDentistryHelper().deleteDentistry();
     }
 }

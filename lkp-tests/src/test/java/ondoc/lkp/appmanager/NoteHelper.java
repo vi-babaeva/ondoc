@@ -3,6 +3,8 @@ package ondoc.lkp.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class NoteHelper extends HelperBase {
 
     public NoteHelper(WebDriver wd) {
@@ -13,7 +15,20 @@ public class NoteHelper extends HelperBase {
         private static final String REC_NOTE = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div";
         private static final String EDIT = "//div[@class='widget']/div[1]/div/div[3]/a/span";
         private static final String DELETE_BUTTON = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/note-create/notes-create-page/div/div[3]/div/div[1]/button";
+    }
 
+    public boolean isThereNote() {
+        goToInsertNote();
+        waiting(8, TimeUnit.SECONDS);
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div"));
+    }
+
+    public void createFullNote() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createNote();
+        nameNote("Для удаления");
+        descriptionNote("Тест по удалению");
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
     }
 
     public void descriptionNote(String descr) {
@@ -29,13 +44,17 @@ public class NoteHelper extends HelperBase {
     }
 
     public void deleteNote() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input"));
-        }
+        goToInsertNote();
         findAndClick(Elements.REC_NOTE);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+    }
+
+    private void goToInsertNote() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input"));
+        }
     }
 }

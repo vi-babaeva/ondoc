@@ -16,6 +16,18 @@ public class DentistryHelper extends HelperBase {
         private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
     }
 
+    public boolean isThereDentistry() {
+        goToInsertDentistry();
+        waiting(8, TimeUnit.SECONDS);
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
+    }
+
+    public void createFullDentisrty() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createDentisrty();
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+    }
+
         public void createDentisrty() {
         click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']"));
@@ -68,13 +80,17 @@ public class DentistryHelper extends HelperBase {
     }
 
     public void deleteDentistry() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input"));
-        }
+        goToInsertDentistry();
         findAndClick(Elements.REC_DENTISTRY);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+    }
+
+    private void goToInsertDentistry() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[4]/input"));
+        }
     }
 }

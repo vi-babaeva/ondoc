@@ -3,11 +3,14 @@ package ondoc.lkp.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class ConsultationHelper extends HelperBase {
 
     public ConsultationHelper(WebDriver wd) {
         super(wd);
     }
+
 
     private class Elements {
         private static final String REC_CONSULTATION = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div";
@@ -17,6 +20,21 @@ public class ConsultationHelper extends HelperBase {
         private static final String MKB = "//div[@id='icd-form-select_dropdown']/div[3]/div/div[2]";
         private static final String CLINIC = "//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]/strong";
         private static final String DOCTOR = "//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/a";
+    }
+
+    public boolean isThereConsultation() {
+        goToInsertConsultation();
+        waiting(8, TimeUnit.SECONDS);
+        return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div"));
+    }
+
+    public void createFullConsultation() throws InterruptedException {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        createConsultation();
+        MKB();
+        diagnosis("Атопический дерматит");
+        click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+        commentInConsultation();
     }
 
     public void recommendations(String recomendadions) {
@@ -58,13 +76,17 @@ public class ConsultationHelper extends HelperBase {
     }
 
     public void deleteConsultation() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/span"));
-        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input")).isSelected()) {
-            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input"));
-        }
+        goToInsertConsultation();
         findAndClick(Elements.REC_CONSULTATION);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+    }
+
+    private void goToInsertConsultation() {
+        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/span"));
+        if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input")).isSelected()) {
+            click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[2]/input"));
+        }
     }
 }

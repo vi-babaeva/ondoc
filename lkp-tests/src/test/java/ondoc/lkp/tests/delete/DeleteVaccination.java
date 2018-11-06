@@ -8,6 +8,10 @@ public class DeleteVaccination extends TestBase {
     @Test
     public void testDeleteVaccination() {
         app.getNavigationHelper().gotoMedcard();
+        if (! app.getVaccinationHelper().isThereVaccination()) {
+            app.getVaccinationHelper().createFullVaccination();
+            app.getNavigationHelper().gotoMedcard();
+        }
         app.getVaccinationHelper().deleteVaccination();
     }
 }
