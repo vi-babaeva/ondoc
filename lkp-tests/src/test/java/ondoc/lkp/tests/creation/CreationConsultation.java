@@ -1,6 +1,7 @@
 package ondoc.lkp.tests.creation;
 
 import ondoc.lkp.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreationConsultation extends TestBase {
@@ -8,6 +9,8 @@ public class CreationConsultation extends TestBase {
     @Test
     public void testCreateConsultation() throws InterruptedException {
         app.getNavigationHelper().gotoMedcard();
+        app.getConsultationHelper().goToInsertConsultation();
+        int before = app.getConsultationHelper().getConsultationCount();
         app.getNavigationHelper().choseType();
         app.getConsultationHelper().createConsultation();
         app.getConsultationHelper().MKB();
@@ -27,7 +30,9 @@ public class CreationConsultation extends TestBase {
                 "Избегать респираторных заболеваний\n" +
                 "Санаторно-курортное лечение – сероводородные и радоновые источники (Мацеста, Цхалубо и др.), солнечные ванны.");
         app.getNavigationHelper().save();
-        app.getConsultationHelper().commentInConsultation();
+        app.getNavigationHelper().backToList();
+        int after = app.getConsultationHelper().getConsultationCount();
+        Assert.assertEquals(after, before + 1);
     }
 
 }

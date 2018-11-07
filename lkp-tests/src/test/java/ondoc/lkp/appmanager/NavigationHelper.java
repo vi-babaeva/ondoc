@@ -32,8 +32,12 @@ public class NavigationHelper extends HelperBase {
 
     public void backToList() {
         click(By.linkText("Назад к списку"));
-        wd.navigate().refresh();
+        refreshPage();
         waiting(20, TimeUnit.SECONDS);
+    }
+
+    public void refreshPage() {
+        wd.navigate().refresh();
     }
 
     public void add() {

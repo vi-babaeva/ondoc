@@ -1,6 +1,7 @@
 package ondoc.lkp.tests.creation;
 
 import ondoc.lkp.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreationDentistry extends TestBase {
@@ -8,6 +9,8 @@ public class CreationDentistry extends TestBase {
     @Test
     public void testCreationDentistry() {
         app.getNavigationHelper().gotoMedcard();
+        app.getDentistryHelper().goToInsertDentistry();
+        int before = app.getDentistryHelper().getDentistryCount();
         app.getNavigationHelper().choseType();
         app.getDentistryHelper().createDentisrty();
         app.getDentistryHelper().toothSelection27();
@@ -25,7 +28,9 @@ public class CreationDentistry extends TestBase {
                 "2) возникли неприятные ощущения во время приема сладких, кислых, холодных или горячих продуктов;\n" +
                 "3) после окончания действия анестезии пломба мешает смыканию зубов.");
         app.getNavigationHelper().save();
-        app.getDentistryHelper().commentInDentistry();
+        app.getNavigationHelper().backToList();
+        int after = app.getDentistryHelper().getDentistryCount();
+        Assert.assertEquals(after, before + 1);
     }
 }
 

@@ -18,8 +18,6 @@ public class NoteHelper extends HelperBase {
     }
 
     public boolean isThereNote() {
-        goToInsertNote();
-        waiting(8, TimeUnit.SECONDS);
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/div"));
     }
 
@@ -51,10 +49,15 @@ public class NoteHelper extends HelperBase {
         click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
     }
 
-    private void goToInsertNote() {
+    public void goToInsertNote() {
         click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/span"));
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[6]/input"));
         }
+        waiting(8, TimeUnit.SECONDS);
+    }
+
+    public int getNoteCount() {
+        return wd.findElements(By.cssSelector("div.text-overflow.ng-binding")).size();
     }
 }

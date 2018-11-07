@@ -1,6 +1,7 @@
 package ondoc.lkp.tests.creation;
 
 import ondoc.lkp.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreationNote extends TestBase {
@@ -8,6 +9,8 @@ public class CreationNote extends TestBase {
     @Test
     public void testCreationNote() {
         app.getNavigationHelper().gotoMedcard();
+        app.getNoteHelper().goToInsertNote();
+        int before = app.getNoteHelper().getNoteCount();
         app.getNavigationHelper().choseType();
         app.getNoteHelper().createNote();
         app.getNoteHelper().nameNote("LPG-массаж");
@@ -19,5 +22,8 @@ public class CreationNote extends TestBase {
                 "\n" +
                 "Lpg-массаж проводят через индивидуальный спецкостюм (эндермологический комбинезон) для гигиеничного и безболезненного воздействия манипулы и лучшего захвата кожи.");
         app.getNavigationHelper().save();
+        app.getNavigationHelper().backToList();
+        int after = app.getNoteHelper().getNoteCount();
+        Assert.assertEquals(after, before + 1);
     }
 }

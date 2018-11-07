@@ -32,8 +32,6 @@ public class AnalysisHelper extends HelperBase {
     }
 
     public boolean isThereAnalysis() {
-        goToInsertAnalysis();
-        waiting(8, TimeUnit.SECONDS);
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
     }
 
@@ -92,6 +90,7 @@ public class AnalysisHelper extends HelperBase {
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[3]/input"));
         }
+        waiting(8, TimeUnit.SECONDS);
     }
 
     public int getAnalysisCount() {

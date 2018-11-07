@@ -2,10 +2,6 @@ package ondoc.lkp.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -39,8 +35,6 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public boolean isThereAllergies() {
-        goToInsertAllergies();
-        waiting(15, TimeUnit.SECONDS);
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div"));
     }
 
@@ -72,17 +66,6 @@ public class AllergiesHelper extends HelperBase {
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
         click(By.xpath("//div[@class='custom-modal__modal']//a[.='Удалить']"));
-
-        WebElement urlElement = (new WebDriverWait(wd, 10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/span")));
-
-        //доделать вывод результата не на консоль, а в idea
-        String url = wd.getCurrentUrl();
-        if (url.equals("https://dev.ondoc.me/medcard?type=allergy")) {
-            System.out.println("Delete - Passed");
-        } else {
-            System.out.println("Delete - Failed");
-        }
     }
 
     public void attachDocument() {
@@ -95,6 +78,7 @@ public class AllergiesHelper extends HelperBase {
         if (!wd.findElement(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input")).isSelected()) {
             click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[3]/label[7]/input"));
         }
+        waiting(8, TimeUnit.SECONDS);
     }
 
     private File pdf;
