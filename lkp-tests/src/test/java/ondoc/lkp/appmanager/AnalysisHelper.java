@@ -35,6 +35,15 @@ public class AnalysisHelper extends HelperBase {
         return isElementPresent(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]"));
     }
 
+    public void modificationAnalysis() {
+        findAndClick(Elements.REC_ANALYSIS);
+        findAndClick(Elements.EDIT);
+        analysisName("Щитовидная железа: расширенное обследование");
+        firstIndicator("Гемоглобин", "13.1", "11.7 - 15.5", "г/дл", "");
+        secondIndicator("MCH (ср. содер. Hb в эр.)", "29.8", "27.0 - 34.0", "пг", "");
+        conclusionOfResults("Необходимо включить в свой рацион продукты, содержащие йод: йодированная соль, морские сорта рыб, моллюски, ламинария, помидоры, капуста, фейхоа, клубника, клюква, лимон.");
+    }
+
     public void conclusionOfResults(String conclusions) {
         type(By.xpath("//div[@class='widget']/div[2]/div[4]/textarea"), conclusions);
     }

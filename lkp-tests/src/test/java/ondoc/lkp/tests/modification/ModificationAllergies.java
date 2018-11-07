@@ -8,6 +8,7 @@ public class ModificationAllergies extends TestBase {
    @Test
     public void testModificationAllergies() {
        app.getNavigationHelper().gotoMedcard();
+       app.getAllergiesHelper().goToInsertAllergies();
        if (! app.getAllergiesHelper().isThereAllergies()) {
            app.getAllergiesHelper().createFullAllergies();
            app.getNavigationHelper().gotoMedcard();

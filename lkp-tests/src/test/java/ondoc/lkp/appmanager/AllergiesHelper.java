@@ -53,7 +53,6 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public  void modificationAllergies() {
-        goToInsertAllergies();
         findAndClick(Elements.REC_ALLERG);
         findAndClick(Elements.EDIT);
         type(By.xpath("//div[@class='col-xs-17']/input"), "Аллергия на шоколад");
