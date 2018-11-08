@@ -12,7 +12,7 @@ public class DeleteNote extends TestBase {
         app.getNoteHelper().goToInsertNote();
         if (! app.getNoteHelper().isThereNote()) {
             app.getNoteHelper().createFullNote();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
         int before = app.getNoteHelper().getNoteCount();
         app.getNoteHelper().deleteNote();

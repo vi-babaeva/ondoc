@@ -12,7 +12,7 @@ public class DeleteVaccination extends TestBase {
         app.getVaccinationHelper().goToInsertVaccination();
         if (! app.getVaccinationHelper().isThereVaccination()) {
             app.getVaccinationHelper().createFullVaccination();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
         int before = app.getVaccinationHelper().getVaccinationCount();
         app.getVaccinationHelper().deleteVaccination();
