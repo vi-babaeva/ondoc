@@ -34,6 +34,7 @@ public class VaccinationHelper extends HelperBase {
 
     public void newDataVaccine2() {
         type(By.xpath("//div[@class='widget']/div[2]/div[3]/div[3]/div/calendar/div[2]/input"), "18.12.2019" );
+        //type(By.className("sc-chPdSV esENOO"), "18.12.2019");
     }
 
     public void nameVaccine(String name) {

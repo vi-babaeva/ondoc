@@ -34,7 +34,7 @@ public class NoteHelper extends HelperBase {
     }
 
     public void nameNote(String name) {
-        type(By.cssSelector("input.sc-dxgOiQ.jYQKwt"), name);
+        type(By.cssSelector("input.sc-fjdhpX.gXfhQv"), name);
     }
 
     public void createNote() {

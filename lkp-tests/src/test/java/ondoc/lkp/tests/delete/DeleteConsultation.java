@@ -10,11 +10,11 @@ public class DeleteConsultation extends TestBase {
     public void testDeleteConsultation() throws InterruptedException {
         app.getNavigationHelper().gotoMedcard();
         app.getConsultationHelper().goToInsertConsultation();
-        int before = app.getConsultationHelper().getConsultationCount();
         if (! app.getConsultationHelper().isThereConsultation()) {
             app.getConsultationHelper().createFullConsultation();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
+        int before = app.getConsultationHelper().getConsultationCount();
         app.getConsultationHelper().deleteConsultation();
         app.getConsultationHelper().goToInsertConsultation();
         app.getNavigationHelper().refreshPage();

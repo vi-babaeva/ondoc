@@ -10,11 +10,11 @@ public class DeleteDentistry extends TestBase {
     public void testDeleteDentistry() {
         app.getNavigationHelper().gotoMedcard();
         app.getDentistryHelper().goToInsertDentistry();
-        int before = app.getDentistryHelper().getDentistryCount();
         if (! app.getDentistryHelper().isThereDentistry()) {
             app.getDentistryHelper().createFullDentisrty();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
+        int before = app.getDentistryHelper().getDentistryCount();
         app.getDentistryHelper().deleteDentistry();
         app.getDentistryHelper().goToInsertDentistry();
         app.getNavigationHelper().refreshPage();

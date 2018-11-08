@@ -10,11 +10,11 @@ public class DeleteAnalysis extends TestBase {
     public void testDeleteAnalysis() {
         app.getNavigationHelper().gotoMedcard();
         app.getAnalysisHelper().goToInsertAnalysis();
-        int before = app.getAnalysisHelper().getAnalysisCount();
         if (! app.getAnalysisHelper().isThereAnalysis()) {
             app.getAnalysisHelper().createFullAnalysis();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
+        int before = app.getAnalysisHelper().getAnalysisCount();
         app.getAnalysisHelper().deleteAnalysis();
         app.getAnalysisHelper().goToInsertAnalysis();
         app.getNavigationHelper().refreshPage();

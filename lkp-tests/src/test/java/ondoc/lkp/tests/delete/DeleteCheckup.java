@@ -10,11 +10,11 @@ public class DeleteCheckup extends TestBase {
     public void testDeleteCheckup() {
         app.getNavigationHelper().gotoMedcard();
         app.getCheckupHelper().goToInsertCheckup();
-        int before = app.getCheckupHelper().getCheckupCount();
         if (! app.getCheckupHelper().isThereCheckup()) {
             app.getCheckupHelper().createFullCheckup();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
+        int before = app.getCheckupHelper().getCheckupCount();
         app.getCheckupHelper().deleteCheckup();
         app.getCheckupHelper().goToInsertCheckup();
         app.getNavigationHelper().refreshPage();

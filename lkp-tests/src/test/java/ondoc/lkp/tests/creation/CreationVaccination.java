@@ -16,7 +16,7 @@ public class CreationVaccination extends TestBase {
         app.getVaccinationHelper().nameVaccination("Прививка от гриппа");
         app.getVaccinationHelper().nameVaccine("Инфлювак");
         app.getNavigationHelper().add();
-        app.getVaccinationHelper().newDataVaccine2();
+        //app.getVaccinationHelper().newDataVaccine2();
         app.getVaccinationHelper().nameVaccine2("Гриппол");
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

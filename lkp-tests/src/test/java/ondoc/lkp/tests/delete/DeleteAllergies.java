@@ -10,11 +10,11 @@ public class DeleteAllergies extends TestBase {
     public void testDeleteAllergies() {
         app.getNavigationHelper().gotoMedcard();
         app.getAllergiesHelper().goToInsertAllergies();
-        int before = app.getAllergiesHelper().getAllergiesCount();
         if (! app.getAllergiesHelper().isThereAllergies()) {
             app.getAllergiesHelper().createFullAllergies();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
+        int before = app.getAllergiesHelper().getAllergiesCount();
         app.getAllergiesHelper().deleteAllergies();
         app.getAllergiesHelper().goToInsertAllergies();
         app.getNavigationHelper().refreshPage();
