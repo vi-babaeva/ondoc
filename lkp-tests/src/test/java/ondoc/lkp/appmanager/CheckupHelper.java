@@ -44,6 +44,21 @@ public class CheckupHelper extends HelperBase {
         click(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding"));
     }
 
+    public void modificationCheckup() {
+        findAndClick(Elements.REC_CHECKUP);
+        findAndClick(Elements.EDIT);
+        choseDirectionModification();
+        directionName("Диетология");
+        MKBcheckupModification();
+        diagnosisChekup("Ожирение I степени");
+        complaintsChekup("Проблема с лишним весом");
+        anamnesisChekup("ИТМ = 32,4. Рост 170 см, вес 96 кг");
+        objectivelyChekup("Абдоминальное распределение жировой массы");
+        recommendationsChekup("Рацион питания должен состоять из свежих фруктов, ягод, овощей, зелени.\n" +
+                "Записаться в тренажёрный зал.\n" +
+                "Исключить продукты с консервантами, красителями, стабилизаторами, повышенным количеством сахара и жиров.");
+    }
+
     public void directionName(String name) {
         type(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/input"), name);
     }
@@ -52,6 +67,12 @@ public class CheckupHelper extends HelperBase {
         click(By.id("direction-form-select_value"));
         click(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[2]/direction-autocomplete/div/a"));
         click(By.xpath("//div[@class='clinic-directions__inner-wrapper']//span[.='Иммунология']"));
+    }
+
+    public void choseDirectionModification() {
+        click(By.id("direction-form-select_value"));
+        click(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[2]/div[2]/direction-autocomplete/div/a"));
+        click(By.xpath("//div[@class='clinic-directions__inner-wrapper']//span[.='Диетология']"));
     }
 
     public void recommendationsChekup(String rek) {
@@ -77,6 +98,11 @@ public class CheckupHelper extends HelperBase {
     public void MKBcheckup() {
         type(By.id("icd-form-select_value"), "Имму");
         click(By.xpath("//div[@id='icd-form-select_dropdown']/div[10]/div/div[2]"));
+    }
+
+    public void MKBcheckupModification() {
+        type(By.id("icd-form-select_value"), "Ожирен");
+        click(By.xpath("//div[@id='icd-form-select_dropdown']/div[5]/div/div[2]"));
     }
 
     public void commentInChekup() {
