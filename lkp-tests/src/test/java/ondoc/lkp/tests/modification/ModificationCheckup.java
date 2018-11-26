@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ModificationCheckup extends TestBase {
+
     @Test
     public void testModificationCheckup() {
         app.getNavigationHelper().gotoMedcard();

@@ -33,6 +33,18 @@ public class ConsultationHelper extends HelperBase {
         commentInConsultation();
     }
 
+    public void modificationConsultation() {
+        findAndClick(Elements.REC_CONSULTATION);
+        findAndClick(Elements.EDIT);
+        MKBmodification();
+        diagnosis("Пищевое отравление");
+        complaints("Тошнота, боль в верхней половине живота, тупая, постоянная.");
+        anamnesis("Регулярное, полноценное. Аппетит удовлетворительный. " +
+                "Путь заражения: пищевой. Источником развития данного заболевания предположительно могут являться 1)съеденные накануне: курица с картофелем (домашнее приготовление), жареный арахис, купленный наразвес в магазине.");
+        objectively("Общее состояние удовлетворительное. Сознание ясное. Положение активное.");
+        recommendations("Покой");
+    }
+
     public void recommendations(String recomendadions) {
         type(By.xpath("//div[@class='widget']/div[2]/div/div[1]/div[6]/div[2]/textarea"), recomendadions);
     }
@@ -55,6 +67,11 @@ public class ConsultationHelper extends HelperBase {
 
     public void MKB() {
         type(By.id("icd-form-select_value"), "it");
+        findAndClick(Elements.MKB);
+    }
+
+    public void MKBmodification() {
+        type(By.id("icd-form-select_value"), "yt");
         findAndClick(Elements.MKB);
     }
 
