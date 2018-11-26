@@ -29,6 +29,14 @@ public class NoteHelper extends HelperBase {
         click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
     }
 
+    public void modificationNote() {
+        findAndClick(Elements.REC_NOTE);
+        findAndClick(Elements.EDIT);
+        clear(By.xpath("//div[@class='widget']/div[2]/div[1]/div[1]/div[2]/input"));
+        nameNote("Редактирование заметки");
+        descriptionNote("Тест по редактированию");
+    }
+
     public void descriptionNote(String descr) {
         type(By.xpath("//div[@class='widget__textarea-wrapper']/textarea"), descr);
     }
