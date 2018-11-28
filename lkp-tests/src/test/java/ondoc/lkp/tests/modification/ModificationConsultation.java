@@ -13,7 +13,7 @@ public class ModificationConsultation extends TestBase{
         int before = app.getConsultationHelper().getConsultationCount();
         if (! app.getConsultationHelper().isThereConsultation()) {
             app.getConsultationHelper().createFullConsultation();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
         app.getConsultationHelper().modificationConsultation();
         app.getNavigationHelper().save();

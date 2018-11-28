@@ -13,7 +13,7 @@ public class ModificationDentistry extends TestBase {
         int before = app.getDentistryHelper().getDentistryCount();
         if (! app.getDentistryHelper().isThereDentistry()) {
             app.getDentistryHelper().createFullDentisrty();
-            app.getNavigationHelper().gotoMedcard();
+            app.getNavigationHelper().backToList();
         }
         app.getDentistryHelper().modificationDentistry();
         app.getNavigationHelper().save();

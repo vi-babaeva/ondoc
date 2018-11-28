@@ -13,7 +13,7 @@ public class ModificationAllergies extends TestBase {
        int before = app.getAllergiesHelper().getAllergiesCount();
        if (! app.getAllergiesHelper().isThereAllergies()) {
            app.getAllergiesHelper().createFullAllergies();
-           app.getNavigationHelper().gotoMedcard();
+           app.getNavigationHelper().backToList();
        }
        app.getAllergiesHelper().modificationAllergies();
        app.getNavigationHelper().save();
