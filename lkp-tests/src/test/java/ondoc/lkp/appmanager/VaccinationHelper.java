@@ -25,7 +25,17 @@ public class VaccinationHelper extends HelperBase {
         createVaccination();
         nameVaccination("Прививка от гриппа");
         nameVaccine("Инфлювак");
+        click(By.linkText("Добавить"));
+        nameVaccine2("Флюарикс");
         click(By.xpath("//div[@class='widget']//button[.='Сохранить']"));
+    }
+
+    public void modificationVaccination() {
+        findAndClick(Elements.REC_VACCINATION);
+        findAndClick(Elements.EDIT);
+        nameVaccination("Прививка от бешенства");
+        nameVaccine("Рабипур");
+        nameVaccine2("Индираб");
     }
 
     public void nameVaccine2(String name) {
