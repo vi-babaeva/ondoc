@@ -10,11 +10,11 @@ public class ModificationAnalysis extends TestBase {
     public void testModificationAnalysis() {
         app.getNavigationHelper().gotoMedcard();
         app.getAnalysisHelper().goToInsertAnalysis();
-        int before = app.getAnalysisHelper().getAnalysisCount();
         if (! app.getAnalysisHelper().isThereAnalysis()) {
             app.getAnalysisHelper().createFullAnalysis();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getAnalysisHelper().getAnalysisCount();
         app.getAnalysisHelper().modificationAnalysis();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

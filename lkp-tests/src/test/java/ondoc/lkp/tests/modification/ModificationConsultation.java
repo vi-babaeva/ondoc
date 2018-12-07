@@ -10,11 +10,11 @@ public class ModificationConsultation extends TestBase{
     public void testModificationConsultation() throws InterruptedException {
         app.getNavigationHelper().gotoMedcard();
         app.getConsultationHelper().goToInsertConsultation();
-        int before = app.getConsultationHelper().getConsultationCount();
         if (! app.getConsultationHelper().isThereConsultation()) {
             app.getConsultationHelper().createFullConsultation();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getConsultationHelper().getConsultationCount();
         app.getConsultationHelper().modificationConsultation();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

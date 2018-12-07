@@ -10,11 +10,11 @@ public class ModificationDentistry extends TestBase {
     public void testModificationDentistry() {
         app.getNavigationHelper().gotoMedcard();
         app.getDentistryHelper().goToInsertDentistry();
-        int before = app.getDentistryHelper().getDentistryCount();
         if (! app.getDentistryHelper().isThereDentistry()) {
             app.getDentistryHelper().createFullDentisrty();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getDentistryHelper().getDentistryCount();
         app.getDentistryHelper().modificationDentistry();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

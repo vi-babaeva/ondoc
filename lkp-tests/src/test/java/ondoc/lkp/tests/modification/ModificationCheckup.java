@@ -10,11 +10,11 @@ public class ModificationCheckup extends TestBase {
     public void testModificationCheckup() {
         app.getNavigationHelper().gotoMedcard();
         app.getCheckupHelper().goToInsertCheckup();
-        int before = app.getCheckupHelper().getCheckupCount();
         if (! app.getCheckupHelper().isThereCheckup()) {
             app.getCheckupHelper().createFullCheckup();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getCheckupHelper().getCheckupCount();
         app.getCheckupHelper().modificationCheckup();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

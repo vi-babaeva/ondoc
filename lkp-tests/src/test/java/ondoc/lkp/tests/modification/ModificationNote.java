@@ -10,11 +10,11 @@ public class ModificationNote extends TestBase {
     public void testModificationNote() {
         app.getNavigationHelper().gotoMedcard();
         app.getNoteHelper().goToInsertNote();
-        int before = app.getNoteHelper().getNoteCount();
         if (! app.getNoteHelper().isThereNote()) {
             app.getNoteHelper().createFullNote();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getNoteHelper().getNoteCount();
         app.getNoteHelper().modificationNote();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();

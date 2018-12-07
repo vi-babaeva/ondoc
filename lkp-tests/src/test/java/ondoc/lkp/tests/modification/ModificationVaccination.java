@@ -10,11 +10,11 @@ public class ModificationVaccination extends TestBase {
     public void testModificationVaccination() {
         app.getNavigationHelper().gotoMedcard();
         app.getVaccinationHelper().goToInsertVaccination();
-        int before = app.getVaccinationHelper().getVaccinationCount();
         if (! app.getVaccinationHelper().isThereVaccination()) {
             app.getVaccinationHelper().createFullVaccination();
             app.getNavigationHelper().backToList();
         }
+        int before = app.getVaccinationHelper().getVaccinationCount();
         app.getVaccinationHelper().modificationVaccination();
         app.getNavigationHelper().save();
         app.getNavigationHelper().backToList();
