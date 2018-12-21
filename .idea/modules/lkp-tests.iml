@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../../lkp-tests">
       <excludeFolder url="file://$MODULE_DIR$/../../lkp-tests/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../lkp-tests/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../lkp-tests/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
