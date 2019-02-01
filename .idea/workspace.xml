@@ -2,68 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="908e0b8f-e21e-4fa9-a0d3-4547f36af7ce" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_72.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_25_0_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_8_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_exec_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_api_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_chrome_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_edge_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_firefox_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_ie_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_java_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_opera_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_remote_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_safari_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_support_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_testng_testng_7_0_0_beta1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_testng_testng_7_0_0_beta1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lkp-tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lkp-tests.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lkp-tests_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lkp-tests_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lkp-tests_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lkp-tests_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationAllergies.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationAllergies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationAnalysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationCheckup.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationCheckup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationConsultation.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationConsultation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationDentistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationDentistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationNote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationVaccination.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/build/classes/java/test/ondoc/lkp/tests/modification/ModificationVaccination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAllergies.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAllergies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationCheckup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationConsultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationDentistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationDentistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationNote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationVaccination.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationVaccination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAllergies.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteAllergies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteCheckup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteConsultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteConsultation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteDentistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteDentistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteNote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteVaccination.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/DeleteVaccination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAllergies.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationAllergies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationCheckup.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationCheckup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationConsultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationConsultation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationDentistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationDentistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationNote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationVaccination.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationVaccination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/AllergiesHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/AllergiesHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/AnalysisHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/AnalysisHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NavigationHelper$Elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NavigationHelper$Elements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NavigationHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NavigationHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NoteHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/out/test/classes/ondoc/lkp/appmanager/NoteHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/lkp-tests/.gradle/" />
     <ignored path="$PROJECT_DIR$/lkp-tests/build/" />
@@ -75,6 +29,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/lkp_tests$CreationAnalysis.ic" NAME="CreationAnalysis Coverage Results" MODIFIED="1549025386771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ondoc.lkp.tests.medcard.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/lkp_tests$CreateConsultation.coverage" NAME="CreateConsultation Coverage Results" MODIFIED="1539267193072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ondoc.lkp.*</FILTER>
     </SUITE>
@@ -96,20 +53,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="487">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ApplicationManager.java">
+        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="441">
+              <caret line="45" column="67" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="67" />
+              <folding>
+                <element signature="e#1918#1919#0" expanded="true" />
+                <element signature="e#1995#1996#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="44" column="72" lean-forward="true" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -154,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/CreationAllergies.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/CreationVaccination.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/CreationDentistry.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/TestBase.java" />
@@ -178,12 +156,8 @@
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationConsultation.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationDentistry.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationNote.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationAnalysis.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAnalysis.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteAllergies.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteCheckup.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteConsultation.java" />
@@ -191,11 +165,6 @@
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteNote.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/delete/DeleteVaccination.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/creation/CreationVaccination.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java" />
-        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationVaccination.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAllergies.java" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationAnalysis.java" />
@@ -205,14 +174,24 @@
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/modification/ModificationNote.java" />
         <option value="$PROJECT_DIR$/lkp-tests/build.gradle" />
         <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java" />
+        <option value="$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1563" />
-    <option name="y" value="52" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="17" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -245,7 +224,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,6 +264,15 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lkp" type="462c0819:PsiDirectoryNode" />
+              <item name="appmanager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lkp-tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lkp-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lkp" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,10 +289,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545390230416" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549036643211" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -333,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CreationAllergies">
+  <component name="RunManager" selected="TestNG.CreationAnalysis">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -421,25 +409,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.creation" />
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
       <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.CreationAllergies" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteConsultation" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="lkp-tests_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.delete" />
-      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.DeleteConsultation" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -447,17 +418,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreationAnalysis" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="lkp-tests_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.*" />
+          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests" />
-      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.Login" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
+      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.CreationAnalysis" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreationCheckup" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lkp-tests_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
+      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.CreationCheckup" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreationConsultation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lkp-tests_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
+      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.CreationConsultation" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreationDentistry" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="lkp-tests_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
+      <option name="MAIN_CLASS_NAME" value="ondoc.lkp.tests.medcard.CreationDentistry" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
       <method v="2">
@@ -494,40 +516,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ondoc.lkp.tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="lkp-tests_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/lkp-tests" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ondoc.lkp.tests.medcard" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="lkp-tests_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ondoc.lkp.tests.medcard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ondoc.lkp.tests.medcard" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -539,19 +527,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.ModificationCheckup" />
-      <item itemvalue="TestNG.ondoc.lkp.tests" />
+      <item itemvalue="TestNG.CreationAnalysis" />
       <item itemvalue="TestNG.CreationAllergies" />
-      <item itemvalue="TestNG.Login" />
-      <item itemvalue="TestNG.DeleteConsultation" />
-      <item itemvalue="TestNG.ondoc.lkp.tests.medcard" />
+      <item itemvalue="TestNG.CreationCheckup" />
+      <item itemvalue="TestNG.CreationConsultation" />
+      <item itemvalue="TestNG.CreationDentistry" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreationAnalysis" />
         <item itemvalue="TestNG.CreationAllergies" />
-        <item itemvalue="TestNG.ondoc.lkp.tests.medcard" />
-        <item itemvalue="TestNG.DeleteConsultation" />
-        <item itemvalue="TestNG.ondoc.lkp.tests" />
-        <item itemvalue="TestNG.Login" />
+        <item itemvalue="TestNG.CreationDentistry" />
+        <item itemvalue="TestNG.CreationCheckup" />
+        <item itemvalue="TestNG.CreationConsultation" />
       </list>
     </recent_temporary>
   </component>
@@ -569,41 +557,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Login - 2018.12.19 at 18h 08m 59s.xml">
-      <configuration name="Login" configurationId="TestNG" />
+    <history-entry file="CreationConsultation - 2019.02.01 at 17h 47m 42s.xml">
+      <configuration name="CreationConsultation" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Login - 2018.12.19 at 18h 13m 18s.xml">
-      <configuration name="Login" configurationId="TestNG" />
+    <history-entry file="CreationCheckup - 2019.02.01 at 17h 48m 51s.xml">
+      <configuration name="CreationCheckup" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CreationAllergies - 2018.12.19 at 20h 48m 31s.xml">
+    <history-entry file="CreationCheckup - 2019.02.01 at 17h 49m 08s.xml">
+      <configuration name="CreationCheckup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreationCheckup - 2019.02.01 at 17h 49m 41s.xml">
+      <configuration name="CreationCheckup" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreationDentistry - 2019.02.01 at 17h 51m 01s.xml">
+      <configuration name="CreationDentistry" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreationDentistry - 2019.02.01 at 17h 52m 39s.xml">
+      <configuration name="CreationDentistry" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreationDentistry - 2019.02.01 at 17h 54m 56s.xml">
+      <configuration name="CreationDentistry" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreationAllergies - 2019.02.01 at 18h 27m 19s.xml">
       <configuration name="CreationAllergies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ondoc_lkp_tests - 2018.12.19 at 20h 51m 51s.xml">
-      <configuration name="ondoc.lkp.tests" configurationId="TestNG" />
+    <history-entry file="CreationAllergies - 2019.02.01 at 18h 27m 47s.xml">
+      <configuration name="CreationAllergies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DeleteConsultation - 2018.12.19 at 20h 53m 17s.xml">
-      <configuration name="DeleteConsultation" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ondoc_lkp_tests_medcard - 2018.12.19 at 21h 21m 46s.xml">
-      <configuration name="ondoc.lkp.tests.medcard" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ondoc_lkp_tests_medcard - 2018.12.20 at 13h 41m 23s.xml">
-      <configuration name="ondoc.lkp.tests.medcard" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ondoc_lkp_tests_medcard - 2018.12.21 at 13h 46m 04s.xml">
-      <configuration name="ondoc.lkp.tests.medcard" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ondoc_lkp_tests_medcard - 2018.12.21 at 13h 52m 03s.xml">
-      <configuration name="ondoc.lkp.tests.medcard" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ondoc_lkp_tests_medcard - 2018.12.21 at 13h 52m 21s.xml">
-      <configuration name="ondoc.lkp.tests.medcard" configurationId="TestNG" />
+    <history-entry file="CreationAnalysis - 2019.02.01 at 18h 28m 43s.xml">
+      <configuration name="CreationAnalysis" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1563" y="52" width="1440" height="801" extended-state="0" />
+    <frame x="0" y="23" width="1448" height="801" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30615166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28662872" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -614,8 +602,8 @@
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32930845" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49722221" weight="0.59661496" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39756593" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49722221" weight="0.30042315" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39635855" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -671,122 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAllergies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationNote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationDentistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353">
-          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/HelperBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationCheckup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/SessionHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationVaccination.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -815,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationNote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -977,17 +846,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/ModificationNote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationNote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationDentistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/SessionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="-230">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/HelperBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NoteHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationAllergies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationConsultation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/NavigationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding>
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/VaccinationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/tests/medcard/CreationCheckup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/ConsultationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="77" column="75" selection-start-line="77" selection-start-column="75" selection-end-line="77" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/DentistryHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AllergiesHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="45" column="67" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="67" />
+          <folding>
+            <element signature="e#1918#1919#0" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/CheckupHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="44" column="72" lean-forward="true" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lkp-tests/src/test/java/ondoc/lkp/appmanager/AnalysisHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -21,7 +21,6 @@ public class DentistryHelper extends HelperBase {
     }
 
     public void createFullDentisrty() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
         createDentisrty();
         toothSelection27();
         toothСondition();
@@ -31,7 +30,8 @@ public class DentistryHelper extends HelperBase {
     }
 
         public void createDentisrty() {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-dental\"]"));
+        //click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[1]/div"));
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']"));
         waiting(2, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));

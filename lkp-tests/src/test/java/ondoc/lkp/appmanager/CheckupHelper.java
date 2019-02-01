@@ -36,7 +36,8 @@ public class CheckupHelper extends HelperBase {
     }
 
         public void createCheckup() {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-exam\"]"));
+        //click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div"));
         click(By.cssSelector("strong.ng-scope"));
         waiting(1, TimeUnit.MINUTES);
         click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));

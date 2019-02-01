@@ -25,7 +25,6 @@ public class ConsultationHelper extends HelperBase {
     }
 
     public void createFullConsultation() throws InterruptedException {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
         createConsultation();
         MKB();
         diagnosis("Атопический дерматит");
@@ -76,7 +75,7 @@ public class ConsultationHelper extends HelperBase {
     }
 
     public void createConsultation() throws InterruptedException {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[1]/div"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-consultation\"]"));
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите клинику']"));
         findAndClick(Elements.CLINIC);
         click(By.xpath("//div[@class='widget']//strong[normalize-space(.)='Выберите врача']"));

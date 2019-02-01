@@ -46,7 +46,8 @@ public class NoteHelper extends HelperBase {
     }
 
     public void createNote() {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[1]/div"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-note\"]"));
+        //click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[1]/div"));
     }
 
     public void deleteNote() {
@@ -66,6 +67,6 @@ public class NoteHelper extends HelperBase {
     }
 
     public int getNoteCount() {
-        return wd.findElements(By.cssSelector("div.text-overflow.ng-binding")).size();
+        return wd.findElements(By.cssSelector("div.text-overflow")).size();
     }
 }

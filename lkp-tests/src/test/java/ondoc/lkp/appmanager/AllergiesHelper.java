@@ -43,7 +43,7 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public void createAllergies() {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[3]/div[2]/div"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-allergy\"]"));
     }
 
     public void commentInAllergies() {

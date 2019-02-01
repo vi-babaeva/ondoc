@@ -34,5 +34,4 @@ public class CreationConsultation extends TestBase {
         int after = app.getConsultationHelper().getConsultationCount();
         Assert.assertEquals(after, before + 1);
     }
-
 }

@@ -22,7 +22,8 @@ public class AnalysisHelper extends HelperBase {
     }
 
     public void createFullAnalysis() {
-        click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-analyze\"]"));
+        //click(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a"));
         createAnalysis();
         analysisName("Коагулограмма");
         firstIndicator("Протромбиновое время", "13.5", "9.0 - 15.0", "cек", "good");
@@ -70,18 +71,20 @@ public class AnalysisHelper extends HelperBase {
     }
 
     public void analysisName(String name) {
-        type(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"), name);
+        //type(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"), name);
+        type(By.xpath("//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-create/div/div[2]/div[2]/div[2]/input"), name);
         click(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input"));
         clear(By.xpath("//div[@class='widget']/div[2]/div[3]/div[4]/div/div/div[3]/input"));
     }
 
     public void createAnalysis() {
-        click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[1]/div[2]/div"));
-        click(By.cssSelector("strong.ng-scope"));
+        click(By.xpath("//*[@data-testid=\"medcard-type-analyze\"]"));
+        click(By.xpath("//div[@class='widget']//strong[.='Выберите клинику ']"));
+        click(By.cssSelector("div.font-small.gray-text"));
         waiting(1, TimeUnit.MINUTES);
-        click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
-        click(By.cssSelector("strong.ng-scope"));
-        click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
+        click(By.xpath("//div[@class='widget']//strong[.='Выберите врача ']"));
+        click(By.xpath("//div[@class='medcard-doctor__doc-find-wrapper']/div[1]/div/div[2]"));
+        //click(By.xpath("//div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]"));
         click(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"));
         clear(By.xpath("//div[@class='widget']/div[2]/div[2]/div[2]/input"));
     }
