@@ -22,7 +22,7 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public void reactionAllergies(String reaction) {
-        type(By.xpath("//div[@class='widget']/div[2]/div[1]/div[2]/div[3]/input"), reaction);
+        type(By.xpath("(//input[@type='text'])[2]"), reaction);
     }
 
     public void createFullAllergies() {
@@ -39,7 +39,7 @@ public class AllergiesHelper extends HelperBase {
     }
 
     public void nameAllergies(String name) {
-        type(By.xpath("//div[@class='col-xs-17']/input"), name);
+        type(By.xpath("//input[@type='text']"), name);
     }
 
     public void createAllergies() {

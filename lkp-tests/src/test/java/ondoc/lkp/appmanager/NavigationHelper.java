@@ -12,12 +12,16 @@ public class NavigationHelper extends HelperBase {
     }
 
     private class Elements {
-        private static final String MEDCARD = "//a[contains(text(),'Медицинская карта')]";
+        private static final String MEDCARD = "//a[contains(@href, '/medcard')]";
         private static final String CHOSE_TYPE = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[1]/div[1]/div/div/div[2]/a";
     }
 
     public void save() {
         click(By.xpath("//button[@type='submit']"));
+    }
+
+    public void saveNote() {
+        click(By.xpath("/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/note-create/notes-create-page/div/div[3]/div/div[2]/div/div[2]/button"));
     }
 
     public void choseType() {

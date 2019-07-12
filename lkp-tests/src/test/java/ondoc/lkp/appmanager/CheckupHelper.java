@@ -37,12 +37,11 @@ public class CheckupHelper extends HelperBase {
 
         public void createCheckup() {
         click(By.xpath("//*[@data-testid=\"medcard-type-exam\"]"));
-        //click(By.xpath("//div[1]/div/div[2]/medcard-type-modal/div[2]/div[2]/div[2]/div"));
-        click(By.cssSelector("strong.ng-scope"));
+        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Клиника и врач'])[1]/following::strong[1]"));
         waiting(1, TimeUnit.MINUTES);
-        click(By.xpath("//div[1]/div/div[2]/div[3]/div[1]/div[1]/div/div[2]"));
-        click(By.linkText("Выберите врача"));
-        click(By.cssSelector("p.medcard-doctor__doc-specs.ng-binding"));
+        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='ул. Гарибальди, д. 36'])[1]/preceding::div[2]"));
+        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Выберите врача'])[1]/following::p[1]"));
+        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Выберите врача'])[1]/following::p[1]"));
     }
 
     public void modificationCheckup() {
@@ -128,6 +127,7 @@ public class CheckupHelper extends HelperBase {
     }
 
     public int getCheckupCount() {
-        return wd.findElements(By.cssSelector("div.text-overflow.ng-binding")).size();
+        //return wd.findElements(By.xpath("/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div[1]/medcard-list-item/div/div/div[2]/span")).size();
+        return wd.findElements(By.cssSelector("body > div.inner-page-content > user-layout > div > div > div > section > medcard-layout > ui-view > medcard-list > div > div.widget.widget--min-height > div > div:nth-child(1) > medcard-list-item > div > div > div.col-xs-18.col-md-6.small-right.sm-right.flex.flex-vertical-center > span")).size();
     }
 }
