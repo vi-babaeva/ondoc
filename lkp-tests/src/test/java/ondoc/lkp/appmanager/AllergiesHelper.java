@@ -13,8 +13,8 @@ public class AllergiesHelper extends HelperBase {
 
     private class Elements {
         private static final String REC_ALLERG = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div";
-        private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/a/span";
-        private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+        private static final String EDIT = "/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-details/div/section/div/div[1]/div/div[3]/patient-medcard-edit-button";
+        private static final String DELETE_BUTTON = "/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/allergy-create/div/div[3]/div/div[1]/patient-medcard-allergy-delete-button/button";
     }
 
     public int getAllergiesCount() {
@@ -64,7 +64,7 @@ public class AllergiesHelper extends HelperBase {
         findAndClick(Elements.REC_ALLERG);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
-        click(By.xpath("//div[@class='custom-modal__modal']//a[.='Удалить']"));
+        click(By.xpath("/html/body/div[4]/div/div/div[2]/div/div[2]/button"));
     }
 
     public void attachDocument() {

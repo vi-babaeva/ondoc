@@ -16,8 +16,8 @@ public class AnalysisHelper extends HelperBase {
 
     private class Elements {
         private static final String REC_ANALYSIS = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/medcard-list/div/div[2]/div/div/medcard-list-item/div/div/div[1]/div[2]/strong";
-        private static final String EDIT = "//div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[1]/div/div[3]/a/span";
-        private static final String DELETE_BUTTON = "//div[@class='widget']/div[3]/div/div[1]/medcard-delete-button/input";
+        private static final String EDIT = "/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-details/div/section/div/div[1]/div/div[3]/patient-medcard-edit-button";
+        private static final String DELETE_BUTTON = "/html/body/div[2]/user-layout/div/div/div/section/medcard-layout/ui-view/analyze-create/div/div[3]/div/div[1]/patient-medcard-analyze-delete-button/button";
 
     }
 
@@ -94,7 +94,7 @@ public class AnalysisHelper extends HelperBase {
         findAndClick(Elements.REC_ANALYSIS);
         findAndClick(Elements.EDIT);
         findAndClick(Elements.DELETE_BUTTON);
-        click(By.xpath("//div[@class='custom-modal__modal']//strong[.='Удалить']"));
+        click(By.xpath("/html/body/div[4]/div/div/div[2]/div/div[2]/button"));
     }
 
     public void goToInsertAnalysis() {
